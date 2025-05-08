@@ -1,0 +1,53 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <h1 class="page-title">Tags</h1>
+  
+  <div class="tag-list">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <a href="#{{ tag[0] | slugify }}" class="tag-item">
+        <i class="fas fa-tag"></i>
+        {{ tag[0] }}
+        <span class="count">{{ tag[1] | size }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  {% for tag in tags %}
+    <div id="{{ tag[0] | slugify }}" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        {{ tag[0] }}
+      </h2>
+      
+      <div class="post-list">
+        {% assign posts = tag[1] | sort: 'date' | reverse %}
+        {% for post in posts %}
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              {{ post.date | date: "%B %d, %Y" }}
+              {% if post.author %}
+                <i class="far fa-user"></i>
+                {{ post.author }}
+              {% endif %}
+            </div>
+            {% if post.excerpt %}
+              <div class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 50 }}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div> 

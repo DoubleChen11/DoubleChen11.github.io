@@ -1,0 +1,53 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<div class="categories-page">
+  <h1 class="page-title">Categories</h1>
+  
+  <div class="category-list">
+    {% assign categories = site.categories | sort %}
+    {% for category in categories %}
+      <a href="#{{ category[0] | slugify }}" class="category-item">
+        <i class="fas fa-folder"></i>
+        {{ category[0] }}
+        <span class="count">{{ category[1] | size }}</span>
+      </a>
+    {% endfor %}
+  </div>
+
+  {% for category in categories %}
+    <div id="{{ category[0] | slugify }}" class="category-section">
+      <h2 class="category-title">
+        <i class="fas fa-folder"></i>
+        {{ category[0] }}
+      </h2>
+      
+      <div class="post-list">
+        {% assign posts = category[1] | sort: 'date' | reverse %}
+        {% for post in posts %}
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              {{ post.date | date: "%B %d, %Y" }}
+              {% if post.author %}
+                <i class="far fa-user"></i>
+                {{ post.author }}
+              {% endif %}
+            </div>
+            {% if post.excerpt %}
+              <div class="post-excerpt">
+                {{ post.excerpt | strip_html | truncatewords: 50 }}
+              </div>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div> 

@@ -1,7 +1,18 @@
+title: DoubleChen11's Blog
+description: A personal blog about technology, programming, and life
+baseurl: ""
+url: "https://doublechen11.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Collections
 collections:
   authors:
     output: true
 
+# Defaults
 defaults:
   - scope:
       path: ""
@@ -17,3 +28,19 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - .git
+  - .github
