@@ -1,12 +1,9 @@
 ---
 layout: post
-author: ted
+title: Automating Office Reports
+author: Emily
 ---
-Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the
-edible berry of several species of woody vines in the genus Actinidia.
 
-The most common cultivar group of kiwifruit is oval, about the size of
-a large hen's egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm
-(1.8–2.2 in) in diameter). It has a fibrous, dull greenish-brown skin
-and bright green or golden flesh with rows of tiny, black, edible
-seeds. The fruit has a soft texture, with a sweet and unique flavor.
+Automating Office Reports with Python
+
+In my daily work, I use Python to automate the generation of weekly and monthly reports. With pandas and openpyxl, I can quickly process large amounts of Excel data and generate charts automatically. This blog's practical guides have helped me master these skills and greatly improved my efficiency!

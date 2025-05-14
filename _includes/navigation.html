@@ -1,11 +1,18 @@
 <nav class="site-nav">
-  <ul class="nav-list">
-    {% for item in site.data.navigation %}
-      <li>
-        <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}>
-          {% if item.icon %}<i class="fas fa-{{ item.icon }}"></i> {% endif %}{{ item.name }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% assign groups = site.data.navigation | group_by: "group" | sort: "name" %}
+  {% for group in groups %}
+    <div class="nav-group">
+      <h3 class="nav-group-title">{{ group.name | capitalize }}</h3>
+      <ul class="nav-list">
+        {% assign sorted_items = group.items | sort: "order" %}
+        {% for item in sorted_items %}
+          <li>
+            <a href="{{ item.link }}"{% if page.url == item.link %} class="current"{% endif %}{% if item.external %} target="_blank" rel="noopener"{% endif %} title="{{ item.description }}">
+              {% if item.icon %}<i class="fas fa-{{ item.icon }}"></i> {% endif %}{{ item.name }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
 </nav>

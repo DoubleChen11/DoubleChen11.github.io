@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DoubleChen11's Blog</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/background.css">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - DoubleChen11's Blog</title>
+    <meta name="description" content="分享技术、生活和思考的个人博客">
+    
+    <!-- MathJax Support -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            },
+            "HTML-CSS": { linebreaks: { automatic: true } },
+            SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="DoubleChen11's Blog" href="/feed.xml">
+</head> 
+    
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Blog | DoubleChen11’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Blog" />
+<meta name="author" content="DoubleChen11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="分享技术、生活和思考的个人博客" />
+<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<link rel="canonical" href="http://localhost:4000/blog/" />
+<meta property="og:url" content="http://localhost:4000/blog/" />
+<meta property="og:site_name" content="DoubleChen11’s Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Blog","url":"http://localhost:4000/blog/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <!-- 动态背景 -->
+    <div class="dynamic-bg"></div>
+
+    <!-- 头部导航 -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <h1 class="site-title">
+            <a href="/">DoubleChen11's Blog</a>
+          </h1>
+          <nav class="site-nav">
+            <ul class="nav-list">
+              <li><a href="/" >
+                <i class="fas fa-home"></i> Home
+              </a></li>
+              <li><a href="/blog" class="current">
+                <i class="fas fa-blog"></i> Blog
+              </a></li>
+              <li><a href="/about" >
+                <i class="fas fa-user"></i> About
+              </a></li>
+              <li><a href="/categories" >
+                <i class="fas fa-folder"></i> Categories
+              </a></li>
+              <li><a href="/tags" >
+                <i class="fas fa-tags"></i> Tags
+              </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-content">
+      <div class="container">
+        <h1>Latest Posts</h1>
+
+<ul>
+  
+    <li>
+      <h2><a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a></h2>
+      <h1 id="python-自动化办公实战提高工作效率的利器">Python 自动化办公实战：提高工作效率的利器</h1>
+
+<h2 id="引言">引言</h2>
+
+<p>在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。</p>
+
+<h2 id="实战案例">实战案例</h2>
+
+<h3 id="1-excel数据处理自动化">1. Excel数据处理自动化</h3>
+
+<h4 id="应用场景">应用场景</h4>
+<p>在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。</p>
+
+<h4 id="代码实现">代码实现</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">openpyxl</span>
+<span class="kn">from</span> <span class="nn">openpyxl.styles</span> <span class="kn">import</span> <span class="n">PatternFill</span><span class="p">,</span> <span class="n">Font</span>
+
+<span class="k">def</span> <span class="nf">process_excel_data</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
+    <span class="c1"># 读取Excel文件
+</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+    
+    <span class="c1"># 数据清洗
+</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>  <span class="c1"># 删除空值
+</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>  <span class="c1"># 删除重复值
+</span>    
+    <span class="c1"># 数据统计
+</span>    <span class="n">summary</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
+    
+    <span class="c1"># 保存处理后的数据
+</span>    <span class="k">with</span> <span class="n">pd</span><span class="p">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
+        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'处理后的数据'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">summary</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'数据统计'</span><span class="p">)</span>
+    
+    <span class="c1"># 美化Excel
+</span>    <span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+    <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s">'处理后的数据'</span><span class="p">]</span>
+    
+    <span class="c1"># 设置表头样式
+</span>    <span class="n">header_fill</span> <span class="o">=</span> <span class="n">PatternFill</span><span class="p">(</span><span class="n">start_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">end_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">fill_type</span><span class="o">=</span><span class="s">'solid'</span><span class="p">)</span>
+    <span class="n">header_font</span> <span class="o">=</span> <span class="n">Font</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'FFFFFF'</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">cell</span><span class="p">.</span><span class="n">fill</span> <span class="o">=</span> <span class="n">header_fill</span>
+        <span class="n">cell</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">header_font</span>
+    
+    <span class="n">wb</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+
+<span class="c1"># 使用示例
+</span><span class="n">process_excel_data</span><span class="p">(</span><span class="s">'原始数据.xlsx'</span><span class="p">,</span> <span class="s">'处理后的数据.xlsx'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="2-自动发送邮件">2. 自动发送邮件</h3>
+
+<h4 id="应用场景-1">应用场景</h4>
+<p>定期发送报告、通知或批量发送个性化邮件是很多工作场景中的常见需求。使用Python可以轻松实现邮件的自动发送。</p>
+
+<h4 id="代码实现-1">代码实现</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
+<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
+<span class="kn">from</span> <span class="nn">email.mime.application</span> <span class="kn">import</span> <span class="n">MIMEApplication</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="k">def</span> <span class="nf">send_automated_email</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipient_email</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">attachment_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="c1"># 创建邮件对象
+</span>    <span class="n">msg</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">'From'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">'To'</span><span class="p">]</span> <span class="o">=</span> <span class="n">recipient_email</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">'Subject'</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+    
+    <span class="c1"># 添加邮件正文
+</span>    <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">MIMEText</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s">'html'</span><span class="p">))</span>
+    
+    <span class="c1"># 添加附件
+</span>    <span class="k">if</span> <span class="n">attachment_path</span><span class="p">:</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">attachment_path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">attachment</span> <span class="o">=</span> <span class="n">MIMEApplication</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">())</span>
+            <span class="n">attachment</span><span class="p">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Disposition'</span><span class="p">,</span> <span class="s">'attachment'</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">attachment_path</span><span class="p">)</span>
+            <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">attachment</span><span class="p">)</span>
+    
+    <span class="c1"># 发送邮件
+</span>    <span class="k">try</span><span class="p">:</span>
+        <span class="n">server</span> <span class="o">=</span> <span class="n">smtplib</span><span class="p">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s">'smtp.gmail.com'</span><span class="p">,</span> <span class="mi">587</span><span class="p">)</span>
+        <span class="n">server</span><span class="p">.</span><span class="n">starttls</span><span class="p">()</span>
+        <span class="n">server</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">)</span>
+        <span class="n">server</span><span class="p">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+        <span class="n">server</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"邮件已成功发送至 </span><span class="si">{</span><span class="n">recipient_email</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"发送邮件时出错: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># 批量发送个性化邮件示例
+</span><span class="k">def</span> <span class="nf">send_bulk_emails</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipients_file</span><span class="p">):</span>
+    <span class="c1"># 读取收件人信息
+</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">recipients_file</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">recipient_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'email'</span><span class="p">]</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
+        
+        <span class="c1"># 个性化邮件内容
+</span>        <span class="n">subject</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"您好，</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">！这是您的周报"</span>
+        <span class="n">body</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"""
+        &lt;html&gt;
+            &lt;body&gt;
+                &lt;h2&gt;尊敬的 </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">：&lt;/h2&gt;
+                &lt;p&gt;附件是您的周报，请查收。&lt;/p&gt;
+                &lt;p&gt;如有任何问题，请随时联系我。&lt;/p&gt;
+                &lt;br&gt;
+                &lt;p&gt;祝好！&lt;/p&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+        """</span>
+        
+        <span class="n">send_automated_email</span><span class="p">(</span>
+            <span class="n">sender_email</span><span class="p">,</span>
+            <span class="n">sender_password</span><span class="p">,</span>
+            <span class="n">recipient_email</span><span class="p">,</span>
+            <span class="n">subject</span><span class="p">,</span>
+            <span class="n">body</span><span class="p">,</span>
+            <span class="sa">f</span><span class="s">"reports/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">_report.pdf"</span>
+        <span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="3-文件批量处理">3. 文件批量处理</h3>
+
+<h4 id="应用场景-2">应用场景</h4>
+<p>在日常工作中，我们经常需要对大量文件进行重命名、格式转换等操作。使用Python可以轻松实现这些任务的自动化。</p>
+
+<h4 id="代码实现-2">代码实现</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="k">def</span> <span class="nf">batch_process_files</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s">'.xlsx'</span><span class="p">):</span>
+    <span class="c1"># 创建输出目录
+</span>    <span class="n">os</span><span class="p">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="c1"># 获取所有指定类型的文件
+</span>    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">input_dir</span><span class="p">).</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s">'*</span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s">'</span><span class="p">))</span>
+    
+    <span class="c1"># 处理每个文件
+</span>    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="c1"># 读取文件
+</span>        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+        
+        <span class="c1"># 数据处理（示例：添加处理日期列）
+</span>        <span class="n">df</span><span class="p">[</span><span class="s">'处理日期'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Timestamp</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y-%m-%d'</span><span class="p">)</span>
+        
+        <span class="c1"># 保存处理后的文件
+</span>        <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s">'processed_</span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        
+        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"已处理文件: </span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+
+<span class="c1"># 使用示例
+</span><span class="n">batch_process_files</span><span class="p">(</span><span class="s">'原始文件'</span><span class="p">,</span> <span class="s">'处理后的文件'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="效率提升对比">效率提升对比</h2>
+
+<p>以下是使用Python自动化处理与手动处理的时间对比：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>任务类型</th>
+      <th>手动处理时间</th>
+      <th>自动化处理时间</th>
+      <th>效率提升</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Excel数据处理</td>
+      <td>2小时</td>
+      <td>5分钟</td>
+      <td>96%</td>
+    </tr>
+    <tr>
+      <td>邮件发送</td>
+      <td>1小时</td>
+      <td>2分钟</td>
+      <td>97%</td>
+    </tr>
+    <tr>
+      <td>文件批量处理</td>
+      <td>3小时</td>
+      <td>10分钟</td>
+      <td>94%</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="总结">总结</h2>
+
+<p>通过以上案例，我们可以看到Python在办公自动化中的强大作用。它不仅能够帮助我们节省大量重复性工作的时间，还能提高工作的准确性和一致性。建议读者根据自身工作需求，选择合适的自动化方案，逐步提高工作效率。</p>
+
+<h2 id="参考资料">参考资料</h2>
+
+<ol>
+  <li><a href="https://docs.python.org/3/">Python官方文档</a></li>
+  <li><a href="https://pandas.pydata.org/docs/">pandas文档</a></li>
+  <li><a href="https://openpyxl.readthedocs.io/">openpyxl文档</a></li>
+  <li><a href="https://www.example.com/python-office-automation">Python自动化办公实战</a></li>
+</ol>
+
+<h2 id="评论与讨论">评论与讨论</h2>
+
+<p>欢迎在下方评论区分享你的自动化办公经验，或者提出任何问题。我们可以一起探讨如何更好地利用Python提高工作效率。</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2018/08/22/kiwifruit/">Automating Office Reports</a></h2>
+      <p>Automating Office Reports with Python</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2018/08/21/apples/">Batch Email Sending</a></h2>
+      <p>Batch Email Sending with Python</p>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2018/08/20/bananas/">Automating File Organization</a></h2>
+      <p>Automating File Organization with Python</p>
+
+    </li>
+  
+</ul>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 DoubleChen11's Blog. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/background.js"></script>
+  </body>
+</html>

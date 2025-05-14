@@ -1,14 +1,62 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
 
-<p>
-  {{ page.date | date_to_string }}
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
-</p>
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        <i class="far fa-calendar"></i>
+        {{ page.date | date: "%B %d, %Y" }}
+      </time>
+      {% if page.author %}
+        <span class="post-author">
+          <i class="far fa-user"></i>
+          {{ page.author }}
+        </span>
+      {% endif %}
+      {% if page.categories.size > 0 %}
+        <span class="post-categories">
+          <i class="far fa-folder"></i>
+          {% for category in page.categories %}
+            <a href="{{ '/categories' | relative_url }}#{{ category | slugify }}">{{ category }}</a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        <span class="post-tags">
+          <i class="fas fa-tags"></i>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        </span>
+      {% endif %}
+    </div>
+  </header>
 
-{{ content }}
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="post-share">
+      <h3>分享文章</h3>
+      <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">
+          <i class="fab fa-twitter"></i> Twitter
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" rel="noopener">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://service.weibo.com/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="noopener">
+          <i class="fab fa-weibo"></i> 微博
+        </a>
+      </div>
+    </div>
+
+    {% include comments.html %}
+  </footer>
+</article>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DoubleChen11's Blog</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/background.css">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - DoubleChen11's Blog</title>
+    <meta name="description" content="分享技术、生活和思考的个人博客">
+    
+    <!-- MathJax Support -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            },
+            "HTML-CSS": { linebreaks: { automatic: true } },
+            SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="DoubleChen11's Blog" href="/feed.xml">
+</head> 
+    
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>About | DoubleChen11’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="About" />
+<meta name="author" content="DoubleChen11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="分享技术、生活和思考的个人博客" />
+<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<link rel="canonical" href="http://localhost:4000/about/" />
+<meta property="og:url" content="http://localhost:4000/about/" />
+<meta property="og:site_name" content="DoubleChen11’s Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="About" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"About","name":"DoubleChen11’s Blog","url":"http://localhost:4000/about/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <!-- 动态背景 -->
+    <div class="dynamic-bg"></div>
+
+    <!-- 头部导航 -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-wrapper">
+          <h1 class="site-title">
+            <a href="/">DoubleChen11's Blog</a>
+          </h1>
+          <nav class="site-nav">
+            <ul class="nav-list">
+              <li><a href="/" >
+                <i class="fas fa-home"></i> Home
+              </a></li>
+              <li><a href="/blog" >
+                <i class="fas fa-blog"></i> Blog
+              </a></li>
+              <li><a href="/about" class="current">
+                <i class="fas fa-user"></i> About
+              </a></li>
+              <li><a href="/categories" >
+                <i class="fas fa-folder"></i> Categories
+              </a></li>
+              <li><a href="/tags" >
+                <i class="fas fa-tags"></i> Tags
+              </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-content">
+      <div class="container">
+        <h1 id="python在自动化办公中的数学公式与统计模型示例">Python在自动化办公中的数学公式与统计模型示例</h1>
+
+<h3 id="1-线性回归模型">1. 线性回归模型</h3>
+
+<p>线性回归是分析两个及以上变量间线性关系的统计方法。其表达式为：</p>
+
+\[y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_nx_n + \epsilon\]
+
+<p>下面是使用Python实现简单线性回归的代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="c1"># 示例数据
+</span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]).</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
+
+<span class="c1"># 创建并拟合模型
+</span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># 输出系数
+</span><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"斜率: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"截距: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="2-时间序列预测移动平均法">2. 时间序列预测（移动平均法）</h3>
+
+<p>移动平均法可用于平滑时间序列数据，其公式为：</p>
+
+\[MA_t = \frac{y_{t-1} + y_{t-2} + \dots + y_{t-n}}{n}\]
+
+<p>下面是Python实现移动平均的代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">):</span>
+    <span class="s">"""
+    计算移动平均值
+    
+    参数:
+    data (list): 时间序列数据
+    window_size (int): 窗口大小
+    
+    返回:
+    list: 移动平均结果
+    """</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">window_size</span><span class="p">])</span><span class="o">/</span><span class="n">window_size</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">window_size</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+
+<span class="c1"># 示例数据
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># 计算移动平均
+</span><span class="n">ma_result</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"移动平均结果: </span><span class="si">{</span><span class="n">ma_result</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="3-数据预处理min-max缩放">3. 数据预处理：Min-Max缩放</h3>
+
+<p>Min-Max缩放能把数据缩放到[0, 1]区间，公式如下：</p>
+
+\[X_{norm} = \frac{X - X_{min}}{X_{max} - X_{min}}\]
+
+<p>下面是Python实现Min-Max缩放的代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">min_max_scaling</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="s">"""
+    实现Min-Max缩放
+    
+    参数:
+    data (list): 输入数据
+    
+    返回:
+    list: 缩放后的数据
+    """</span>
+    <span class="n">min_val</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">max_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">max_val</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+
+<span class="c1"># 示例数据
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
+
+<span class="c1"># 进行缩放
+</span><span class="n">scaled_data</span> <span class="o">=</span> <span class="n">min_max_scaling</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"缩放后的数据: </span><span class="si">{</span><span class="n">scaled_data</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="4-决策树核心信息熵计算">4. 决策树核心：信息熵计算</h3>
+
+<p>信息熵用于衡量数据的不确定性，公式为：</p>
+
+\[H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)\]
+
+<p>下面是Python计算信息熵的代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">def</span> <span class="nf">entropy</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
+    <span class="s">"""
+    计算信息熵
+    
+    参数:
+    labels (list): 标签列表
+    
+    返回:
+    float: 信息熵值
+    """</span>
+    <span class="n">_</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">probabilities</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">probabilities</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log2</span><span class="p">(</span><span class="n">probabilities</span><span class="p">))</span>
+
+<span class="c1"># 示例数据
+</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'是'</span><span class="p">,</span> <span class="s">'是'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">]</span>
+
+<span class="c1"># 计算信息熵
+</span><span class="n">entropy_value</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"信息熵: </span><span class="si">{</span><span class="n">entropy_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="5-投资评估净现值npv计算">5. 投资评估：净现值(NPV)计算</h3>
+
+<p>净现值（NPV）可评估投资的盈利能力，公式为：</p>
+
+\[NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+r)^t}\]
+
+<p>下面是Python计算净现值的代码：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">npv</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">cashflows</span><span class="p">):</span>
+    <span class="s">"""
+    计算净现值
+    
+    参数:
+    rate (float): 折现率
+    cashflows (list): 现金流列表，第一个值通常为初始投资（负数）
+    
+    返回:
+    float: 净现值
+    """</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cashflow</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cashflows</span><span class="p">):</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">cashflow</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="n">total</span>
+
+<span class="c1"># 示例数据
+</span><span class="n">rate</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># 10% 折现率
+</span><span class="n">cashflows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>  <span class="c1"># 初始投资1000，后续4年每年收入300
+</span>
+<span class="c1"># 计算净现值
+</span><span class="n">npv_value</span> <span class="o">=</span> <span class="n">npv</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">cashflows</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"净现值: </span><span class="si">{</span><span class="n">npv_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div></div>
+<p><br /></p>
+<p>以上内容展示了Python在数据分析、预测建模和财务分析中的典型应用场景。</p>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>&copy; 2025 DoubleChen11's Blog. All rights reserved.</p>
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/background.js"></script>
+  </body>
+</html>

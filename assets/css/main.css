@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+  background: none;
+  margin: 0;
+  padding: 0;
+  color: #2e2e3a;
+}
+
+.site-header {
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.site-title {
+  font-family: 'Orbitron', 'Roboto Mono', monospace;
+  font-size: 2.8rem;
+  color: #6c2eb7;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px #b39ddb, 0 0 2px #fff;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2rem;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  font-family: 'Orbitron', 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  color: #6c2eb7;
+  text-decoration: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 0px #6c2eb7;
+  position: relative;
+}
+
+.nav-list li a.current, .nav-list li a:hover {
+  background: linear-gradient(90deg, #23a6d5 0%, #6c2eb7 100%);
+  color: #fff;
+  box-shadow: 0 0 12px #23a6d5, 0 0 4px #6c2eb7;
+}
+
+.nav-list li a i {
+  margin-right: 0.5em;
+}
+
+.site-content {
+  margin-top: 2.5rem;
+}
+
+/* 科技感分割线 */
+.site-header::after {
+  content: '';
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 60vw;
+  height: 2px;
+  background: linear-gradient(90deg, #23a6d5 0%, #6c2eb7 100%);
+  opacity: 0.3;
+  border-radius: 1px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2rem;
+  }
+  .nav-list {
+    gap: 1rem;
+  }
+  .site-header::after {
+    width: 90vw;
+  }
+} 
+/* 图书推荐优化样式 */
+.book-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+}
+
+.book-card {
+    background: #f7f7ff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(108,46,183,0.15);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(108,46,183,0.3);
+}
+
+.book-cover {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.book-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.book-title {
+    font-size: 1.3rem;
+    color: #6c2eb7;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.book-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #4a4a65;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .book-section {
+        grid-template-columns: 1fr;
+    }
+}

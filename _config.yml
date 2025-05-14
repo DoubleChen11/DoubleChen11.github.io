@@ -1,46 +1,173 @@
+# Site settings
 title: DoubleChen11's Blog
-description: A personal blog about technology, programming, and life
+description: 分享技术、生活和思考的个人博客
 baseurl: ""
 url: "https://doublechen11.github.io"
 
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  input: GFM
 
 # Collections
 collections:
-  authors:
+  posts:
     output: true
+    permalink: /:year/:month/:day/:title/
 
 # Defaults
 defaults:
   - scope:
       path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+      author: "DoubleChen11"
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
 
-# Exclude from processing
+# Exclude files
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
-  - .gitignore
   - .git
-  - .github
+  - .gitignore
+  - README.md
+  - LICENSE
+  - .DS_Store
+
+# Include files
+include:
+  - _pages
+  - _posts
+  - _drafts
+  - assets
+  - images
+
+# Social media
+social:
+  github: DoubleChen11
+  twitter: DoubleChen11
+  email: your.email@example.com
+
+# Comments
+disqus:
+  shortname: doublechen11
+
+# Analytics
+google_analytics: UA-XXXXXXXXX-X
+
+# Theme settings
+primary_color: 2c3e50
+secondary_color: 3498db
+text_color: 333
+background_color: fff
+font_family: Helvetica Neue, Arial, sans-serif
+
+# Author information
+author:
+  name: DoubleChen11
+  bio: 热爱技术，热爱生活
+  avatar: /assets/images/avatar.jpg
+  location: China
+  links:
+    - title: GitHub
+      url: https://github.com/DoubleChen11
+    - title: Twitter
+      url: https://twitter.com/DoubleChen11
+
+# Navigation
+navigation:
+  - title: 首页
+    url: /
+    icon: home
+  - title: 文章
+    url: /posts/
+    icon: book
+  - title: 分类
+    url: /categories/
+    icon: folder
+  - title: 标签
+    url: /tags/
+    icon: tags
+  - title: 关于
+    url: /about/
+    icon: user
+
+# Footer
+footer:
+  copyright: © 2024 DoubleChen11. All rights reserved.
+  links:
+    - title: 关于本站
+      url: /about/
+    - title: 联系方式
+      url: /contact/
+    - title: 隐私政策
+      url: /privacy/
+
+# SEO
+seo:
+  title: DoubleChen11's Blog - 技术、生活和思考
+  description: 分享技术、生活和思考的个人博客
+  keywords: 技术博客, 编程, Python, 自动化, 效率提升
+  author: DoubleChen11
+  twitter:
+    card: summary_large_image
+    site: "@DoubleChen11"
+  og:
+    type: website
+    site_name: DoubleChen11's Blog
+    locale: zh_CN
+
+# Sitemap
+sitemap:
+  changefreq: weekly
+  priority: 0.8
+  exclude:
+    - /404.html
+    - /feed.xml
+    - /sitemap.xml
+
+# Feed
+feed:
+  path: feed.xml
+  limit: 20
+  categories: []
+  tags: []
+
+# Timezone
+timezone: Asia/Shanghai
+
+# Encoding
+encoding: UTF-8
+
+# Safe mode
+safe: true
+
+# Future posts
+future: false
+
+# LSI
+lsi: false
+
+# Relative links
+relative_links: true
+
+# Incremental build
+incremental: true
+
+# Keep files
+keep_files:
+  - .git
+  - .gitignore
+  - README.md
+  - LICENSE
+  - assets
+  - images

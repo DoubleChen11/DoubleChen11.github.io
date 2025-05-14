@@ -1,18 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags - </title>
+    <title>Tags - DoubleChen11's Blog</title>
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/background.css">
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags - DoubleChen11's Blog</title>
+    <meta name="description" content="分享技术、生活和思考的个人博客">
+    
+    <!-- MathJax Support -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            },
+            "HTML-CSS": { linebreaks: { automatic: true } },
+            SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="DoubleChen11's Blog" href="/feed.xml">
+</head> 
+    
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Tags | DoubleChen11’s Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Tags" />
+<meta name="author" content="DoubleChen11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="分享技术、生活和思考的个人博客" />
+<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<link rel="canonical" href="http://localhost:4000/tags/" />
+<meta property="og:url" content="http://localhost:4000/tags/" />
+<meta property="og:site_name" content="DoubleChen11’s Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Tags" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Tags","url":"http://localhost:4000/tags/"}</script>
+<!-- End Jekyll SEO tag -->
+
   </head>
   <body>
+    <!-- 动态背景 -->
+    <div class="dynamic-bg"></div>
+
+    <!-- 头部导航 -->
     <header class="site-header">
       <div class="container">
         <div class="header-wrapper">
           <h1 class="site-title">
-            <a href="/"></a>
+            <a href="/">DoubleChen11's Blog</a>
           </h1>
           <nav class="site-nav">
             <ul class="nav-list">
@@ -45,8 +102,193 @@
   <div class="tag-list">
     
     
+      <a href="#excel" class="tag-item">
+        <i class="fas fa-tag"></i>
+        Excel
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#python" class="tag-item">
+        <i class="fas fa-tag"></i>
+        Python
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#办公自动化" class="tag-item">
+        <i class="fas fa-tag"></i>
+        办公自动化
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#效率提升" class="tag-item">
+        <i class="fas fa-tag"></i>
+        效率提升
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#邮件" class="tag-item">
+        <i class="fas fa-tag"></i>
+        邮件
+        <span class="count">1</span>
+      </a>
+    
   </div>
 
+  
+    <div id="excel" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        Excel
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 20, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+            </div>
+            
+              <div class="post-excerpt">
+                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="python" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        Python
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 20, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+            </div>
+            
+              <div class="post-excerpt">
+                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="办公自动化" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        办公自动化
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 20, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+            </div>
+            
+              <div class="post-excerpt">
+                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="效率提升" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        效率提升
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 20, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+            </div>
+            
+              <div class="post-excerpt">
+                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="邮件" class="tag-section">
+      <h2 class="tag-title">
+        <i class="fas fa-tag"></i>
+        邮件
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 20, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+            </div>
+            
+              <div class="post-excerpt">
+                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
   
 </div> 
       </div>
@@ -54,7 +296,7 @@
 
     <footer class="site-footer">
       <div class="footer-content">
-        <p>&copy; 2025 . All rights reserved.</p>
+        <p>&copy; 2025 DoubleChen11's Blog. All rights reserved.</p>
         <div class="social-links">
           <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
           <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -62,5 +304,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- 脚本 -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/background.js"></script>
   </body>
 </html>

@@ -1,6 +1,36 @@
----
-short_name: jill
-name: Jill Smith
-position: Chief Editor
----
-Jill is an avid fruit grower based in the south of France.
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jill</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <nav>
+    
+      <a href="/">Home</a>
+    
+      <a href="/about.html">About</a>
+    
+      <a href="/blog.html">Blog</a>
+    
+      <a href="/staff.html">Staff</a>
+    
+</nav>
+    <h1>Jill Smith</h1>
+<h2>Chief Editor</h2>
+
+<p>Jill is an avid fruit grower based in the south of France.</p>
+
+
+<h2>Posts</h2>
+<ul>
+  
+  
+    <li><a href="/2018/08/21/apples.html">Batch Email Sending</a></li>
+  
+    <li><a href="/2018/08/20/bananas.html">File Organization Automation</a></li>
+  
+</ul>
+  </body>
+</html>
