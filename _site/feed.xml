@@ -1,218 +1,194 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-15T11:10:55+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DoubleChen11’s Blog</title><subtitle>分享技术、生活和思考的个人博客</subtitle><author><name>DoubleChen11</name></author><entry><title type="html">Python 自动化办公实战：提高工作效率的利器</title><link href="http://localhost:4000/2024/03/20/python-office-automation/" rel="alternate" type="text/html" title="Python 自动化办公实战：提高工作效率的利器" /><published>2024-03-20T00:00:00+08:00</published><updated>2024-03-20T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/20/python-office-automation</id><content type="html" xml:base="http://localhost:4000/2024/03/20/python-office-automation/"><![CDATA[<h1 id="python-自动化办公实战提高工作效率的利器">Python 自动化办公实战：提高工作效率的利器</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-15T11:24:52+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">DoubleChen11’s Blog</title><subtitle>分享技术、生活和思考的个人博客</subtitle><author><name>DoubleChen11</name></author><entry><title type="html">Python 自动化办公实战：提高工作效率的利器</title><link href="http://localhost:4000/2024/03/20/python-office-automation/" rel="alternate" type="text/html" title="Python 自动化办公实战：提高工作效率的利器" /><published>2024-03-20T00:00:00+08:00</published><updated>2024-03-20T00:00:00+08:00</updated><id>http://localhost:4000/2024/03/20/python-office-automation</id><content type="html" xml:base="http://localhost:4000/2024/03/20/python-office-automation/"><![CDATA[# Python 自动化办公实战：提高工作效率的利器
 
-<h2 id="引言">引言</h2>
+## 引言
 
-<p>在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。</p>
+在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。
 
-<h2 id="实战案例">实战案例</h2>
+## 实战案例
 
-<h3 id="1-excel数据处理自动化">1. Excel数据处理自动化</h3>
+### 1. Excel数据处理自动化
 
-<h4 id="应用场景">应用场景</h4>
-<p>在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。</p>
+#### 应用场景
+在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。
 
-<h4 id="代码实现">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">openpyxl</span>
-<span class="kn">from</span> <span class="nn">openpyxl.styles</span> <span class="kn">import</span> <span class="n">PatternFill</span><span class="p">,</span> <span class="n">Font</span>
+#### 代码实现
+```python
+import pandas as pd
+import openpyxl
+from openpyxl.styles import PatternFill, Font
 
-<span class="k">def</span> <span class="nf">process_excel_data</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
-    <span class="c1"># 读取Excel文件
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
+def process_excel_data(input_file, output_file):
+    # 读取Excel文件
+    df = pd.read_excel(input_file)
     
-    <span class="c1"># 数据清洗
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>  <span class="c1"># 删除空值
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>  <span class="c1"># 删除重复值
-</span>    
-    <span class="c1"># 数据统计
-</span>    <span class="n">summary</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
+    # 数据清洗
+    df = df.dropna()  # 删除空值
+    df = df.drop_duplicates()  # 删除重复值
     
-    <span class="c1"># 保存处理后的数据
-</span>    <span class="k">with</span> <span class="n">pd</span><span class="p">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'处理后的数据'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-        <span class="n">summary</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'数据统计'</span><span class="p">)</span>
+    # 数据统计
+    summary = df.describe()
     
-    <span class="c1"># 美化Excel
-</span>    <span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
-    <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s">'处理后的数据'</span><span class="p">]</span>
+    # 保存处理后的数据
+    with pd.ExcelWriter(output_file) as writer:
+        df.to_excel(writer, sheet_name='处理后的数据', index=False)
+        summary.to_excel(writer, sheet_name='数据统计')
     
-    <span class="c1"># 设置表头样式
-</span>    <span class="n">header_fill</span> <span class="o">=</span> <span class="n">PatternFill</span><span class="p">(</span><span class="n">start_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">end_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">fill_type</span><span class="o">=</span><span class="s">'solid'</span><span class="p">)</span>
-    <span class="n">header_font</span> <span class="o">=</span> <span class="n">Font</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'FFFFFF'</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    # 美化Excel
+    wb = openpyxl.load_workbook(output_file)
+    ws = wb['处理后的数据']
     
-    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">cell</span><span class="p">.</span><span class="n">fill</span> <span class="o">=</span> <span class="n">header_fill</span>
-        <span class="n">cell</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">header_font</span>
+    # 设置表头样式
+    header_fill = PatternFill(start_color='366092', end_color='366092', fill_type='solid')
+    header_font = Font(color='FFFFFF', bold=True)
     
-    <span class="n">wb</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
+    for cell in ws[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+    
+    wb.save(output_file)
 
-<span class="c1"># 使用示例
-</span><span class="n">process_excel_data</span><span class="p">(</span><span class="s">'原始数据.xlsx'</span><span class="p">,</span> <span class="s">'处理后的数据.xlsx'</span><span class="p">)</span>
-</code></pre></div></div>
+# 使用示例
+process_excel_data('原始数据.xlsx', '处理后的数据.xlsx')
+```
 
-<h3 id="2-自动发送邮件">2. 自动发送邮件</h3>
+### 2. 自动发送邮件
 
-<h4 id="应用场景-1">应用场景</h4>
-<p>定期发送报告、通知或批量发送个性化邮件是很多工作场景中的常见需求。使用Python可以轻松实现邮件的自动发送。</p>
+#### 应用场景
+定期发送报告、通知或批量发送个性化邮件是很多工作场景中的常见需求。使用Python可以轻松实现邮件的自动发送。
 
-<h4 id="代码实现-1">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">smtplib</span>
-<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
-<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
-<span class="kn">from</span> <span class="nn">email.mime.application</span> <span class="kn">import</span> <span class="n">MIMEApplication</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+#### 代码实现
+```python
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
+import pandas as pd
 
-<span class="k">def</span> <span class="nf">send_automated_email</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipient_email</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">attachment_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="c1"># 创建邮件对象
-</span>    <span class="n">msg</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'From'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'To'</span><span class="p">]</span> <span class="o">=</span> <span class="n">recipient_email</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'Subject'</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
+def send_automated_email(sender_email, sender_password, recipient_email, subject, body, attachment_path=None):
+    # 创建邮件对象
+    msg = MIMEMultipart()
+    msg['From'] = sender_email
+    msg['To'] = recipient_email
+    msg['Subject'] = subject
     
-    <span class="c1"># 添加邮件正文
-</span>    <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">MIMEText</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s">'html'</span><span class="p">))</span>
+    # 添加邮件正文
+    msg.attach(MIMEText(body, 'html'))
     
-    <span class="c1"># 添加附件
-</span>    <span class="k">if</span> <span class="n">attachment_path</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">attachment_path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">attachment</span> <span class="o">=</span> <span class="n">MIMEApplication</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">())</span>
-            <span class="n">attachment</span><span class="p">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Disposition'</span><span class="p">,</span> <span class="s">'attachment'</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">attachment_path</span><span class="p">)</span>
-            <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">attachment</span><span class="p">)</span>
+    # 添加附件
+    if attachment_path:
+        with open(attachment_path, 'rb') as f:
+            attachment = MIMEApplication(f.read())
+            attachment.add_header('Content-Disposition', 'attachment', filename=attachment_path)
+            msg.attach(attachment)
     
-    <span class="c1"># 发送邮件
-</span>    <span class="k">try</span><span class="p">:</span>
-        <span class="n">server</span> <span class="o">=</span> <span class="n">smtplib</span><span class="p">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s">'smtp.gmail.com'</span><span class="p">,</span> <span class="mi">587</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">starttls</span><span class="p">()</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"邮件已成功发送至 </span><span class="si">{</span><span class="n">recipient_email</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"发送邮件时出错: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    # 发送邮件
+    try:
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.send_message(msg)
+        server.quit()
+        print(f"邮件已成功发送至 {recipient_email}")
+    except Exception as e:
+        print(f"发送邮件时出错: {str(e)}")
 
-<span class="c1"># 批量发送个性化邮件示例
-</span><span class="k">def</span> <span class="nf">send_bulk_emails</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipients_file</span><span class="p">):</span>
-    <span class="c1"># 读取收件人信息
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">recipients_file</span><span class="p">)</span>
+# 批量发送个性化邮件示例
+def send_bulk_emails(sender_email, sender_password, recipients_file):
+    # 读取收件人信息
+    df = pd.read_excel(recipients_file)
     
-    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">iterrows</span><span class="p">():</span>
-        <span class="n">recipient_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'email'</span><span class="p">]</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
+    for _, row in df.iterrows():
+        recipient_email = row['email']
+        name = row['name']
         
-        <span class="c1"># 个性化邮件内容
-</span>        <span class="n">subject</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"您好，</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">！这是您的周报"</span>
-        <span class="n">body</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"""
-        &lt;html&gt;
-            &lt;body&gt;
-                &lt;h2&gt;尊敬的 </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">：&lt;/h2&gt;
-                &lt;p&gt;附件是您的周报，请查收。&lt;/p&gt;
-                &lt;p&gt;如有任何问题，请随时联系我。&lt;/p&gt;
-                &lt;br&gt;
-                &lt;p&gt;祝好！&lt;/p&gt;
-            &lt;/body&gt;
-        &lt;/html&gt;
-        """</span>
+        # 个性化邮件内容
+        subject = f"您好，{name}！这是您的周报"
+        body = f"""
+        <html>
+            <body>
+                <h2>尊敬的 {name}：</h2>
+                <p>附件是您的周报，请查收。</p>
+                <p>如有任何问题，请随时联系我。</p>
+                <br>
+                <p>祝好！</p>
+            </body>
+        </html>
+        """
         
-        <span class="n">send_automated_email</span><span class="p">(</span>
-            <span class="n">sender_email</span><span class="p">,</span>
-            <span class="n">sender_password</span><span class="p">,</span>
-            <span class="n">recipient_email</span><span class="p">,</span>
-            <span class="n">subject</span><span class="p">,</span>
-            <span class="n">body</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s">"reports/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">_report.pdf"</span>
-        <span class="p">)</span>
-</code></pre></div></div>
+        send_automated_email(
+            sender_email,
+            sender_password,
+            recipient_email,
+            subject,
+            body,
+            f"reports/{name}_report.pdf"
+        )
+```
 
-<h3 id="3-文件批量处理">3. 文件批量处理</h3>
+### 3. 文件批量处理
 
-<h4 id="应用场景-2">应用场景</h4>
-<p>在日常工作中，我们经常需要对大量文件进行重命名、格式转换等操作。使用Python可以轻松实现这些任务的自动化。</p>
+#### 应用场景
+在日常工作中，我们经常需要对大量文件进行重命名、格式转换等操作。使用Python可以轻松实现这些任务的自动化。
 
-<h4 id="代码实现-2">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+#### 代码实现
+```python
+import os
+import shutil
+from pathlib import Path
+import pandas as pd
 
-<span class="k">def</span> <span class="nf">batch_process_files</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s">'.xlsx'</span><span class="p">):</span>
-    <span class="c1"># 创建输出目录
-</span>    <span class="n">os</span><span class="p">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+def batch_process_files(input_dir, output_dir, file_type='.xlsx'):
+    # 创建输出目录
+    os.makedirs(output_dir, exist_ok=True)
     
-    <span class="c1"># 获取所有指定类型的文件
-</span>    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">input_dir</span><span class="p">).</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s">'*</span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s">'</span><span class="p">))</span>
+    # 获取所有指定类型的文件
+    files = list(Path(input_dir).glob(f'*{file_type}'))
     
-    <span class="c1"># 处理每个文件
-</span>    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="c1"># 读取文件
-</span>        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+    # 处理每个文件
+    for file in files:
+        # 读取文件
+        df = pd.read_excel(file)
         
-        <span class="c1"># 数据处理（示例：添加处理日期列）
-</span>        <span class="n">df</span><span class="p">[</span><span class="s">'处理日期'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Timestamp</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y-%m-%d'</span><span class="p">)</span>
+        # 数据处理（示例：添加处理日期列）
+        df['处理日期'] = pd.Timestamp.now().strftime('%Y-%m-%d')
         
-        <span class="c1"># 保存处理后的文件
-</span>        <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s">'processed_</span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
-        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        # 保存处理后的文件
+        output_file = os.path.join(output_dir, f'processed_{file.name}')
+        df.to_excel(output_file, index=False)
         
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"已处理文件: </span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        print(f"已处理文件: {file.name}")
 
-<span class="c1"># 使用示例
-</span><span class="n">batch_process_files</span><span class="p">(</span><span class="s">'原始文件'</span><span class="p">,</span> <span class="s">'处理后的文件'</span><span class="p">)</span>
-</code></pre></div></div>
+# 使用示例
+batch_process_files('原始文件', '处理后的文件')
+```
 
-<h2 id="效率提升对比">效率提升对比</h2>
+## 效率提升对比
 
-<p>以下是使用Python自动化处理与手动处理的时间对比：</p>
+以下是使用Python自动化处理与手动处理的时间对比：
 
-<table>
-  <thead>
-    <tr>
-      <th>任务类型</th>
-      <th>手动处理时间</th>
-      <th>自动化处理时间</th>
-      <th>效率提升</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Excel数据处理</td>
-      <td>2小时</td>
-      <td>5分钟</td>
-      <td>96%</td>
-    </tr>
-    <tr>
-      <td>邮件发送</td>
-      <td>1小时</td>
-      <td>2分钟</td>
-      <td>97%</td>
-    </tr>
-    <tr>
-      <td>文件批量处理</td>
-      <td>3小时</td>
-      <td>10分钟</td>
-      <td>94%</td>
-    </tr>
-  </tbody>
-</table>
+| 任务类型 | 手动处理时间 | 自动化处理时间 | 效率提升 |
+|---------|------------|--------------|---------|
+| Excel数据处理 | 2小时 | 5分钟 | 96% |
+| 邮件发送 | 1小时 | 2分钟 | 97% |
+| 文件批量处理 | 3小时 | 10分钟 | 94% |
 
-<h2 id="总结">总结</h2>
+## 总结
 
-<p>通过以上案例，我们可以看到Python在办公自动化中的强大作用。它不仅能够帮助我们节省大量重复性工作的时间，还能提高工作的准确性和一致性。建议读者根据自身工作需求，选择合适的自动化方案，逐步提高工作效率。</p>
+通过以上案例，我们可以看到Python在办公自动化中的强大作用。它不仅能够帮助我们节省大量重复性工作的时间，还能提高工作的准确性和一致性。建议读者根据自身工作需求，选择合适的自动化方案，逐步提高工作效率。
 
-<h2 id="参考资料">参考资料</h2>
+## 参考资料
 
-<ol>
-  <li><a href="https://docs.python.org/3/">Python官方文档</a></li>
-  <li><a href="https://pandas.pydata.org/docs/">pandas文档</a></li>
-  <li><a href="https://openpyxl.readthedocs.io/">openpyxl文档</a></li>
-  <li><a href="https://www.example.com/python-office-automation">Python自动化办公实战</a></li>
-</ol>
+1. [Python官方文档](https://docs.python.org/3/)
+2. [pandas文档](https://pandas.pydata.org/docs/)
+3. [openpyxl文档](https://openpyxl.readthedocs.io/)
+4. [Python自动化办公实战](https://www.example.com/python-office-automation)
 
-<h2 id="评论与讨论">评论与讨论</h2>
+## 评论与讨论
 
-<p>欢迎在下方评论区分享你的自动化办公经验，或者提出任何问题。我们可以一起探讨如何更好地利用Python提高工作效率。</p>]]></content><author><name>DoubleChen11</name></author><category term="Python" /><category term="自动化" /><category term="Python" /><category term="办公自动化" /><category term="Excel" /><category term="邮件" /><category term="效率提升" /><summary type="html"><![CDATA[本文详细介绍Python在办公自动化中的应用，包括Excel数据处理、自动发送邮件等实用案例，帮助读者提高工作效率。]]></summary></entry><entry><title type="html">Automating Office Reports</title><link href="http://localhost:4000/2018/08/22/kiwifruit/" rel="alternate" type="text/html" title="Automating Office Reports" /><published>2018-08-22T00:00:00+08:00</published><updated>2018-08-22T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/22/kiwifruit</id><content type="html" xml:base="http://localhost:4000/2018/08/22/kiwifruit/"><![CDATA[<p>Automating Office Reports with Python</p>
+欢迎在下方评论区分享你的自动化办公经验，或者提出任何问题。我们可以一起探讨如何更好地利用Python提高工作效率。]]></content><author><name>DoubleChen11</name></author><category term="Python" /><category term="自动化" /><category term="Python" /><category term="办公自动化" /><category term="Excel" /><category term="邮件" /><category term="效率提升" /><summary type="html"><![CDATA[本文详细介绍Python在办公自动化中的应用，包括Excel数据处理、自动发送邮件等实用案例，帮助读者提高工作效率。]]></summary></entry><entry><title type="html">Automating Office Reports</title><link href="http://localhost:4000/2018/08/22/kiwifruit/" rel="alternate" type="text/html" title="Automating Office Reports" /><published>2018-08-22T00:00:00+08:00</published><updated>2018-08-22T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/22/kiwifruit</id><content type="html" xml:base="http://localhost:4000/2018/08/22/kiwifruit/"><![CDATA[Automating Office Reports with Python
 
-<p>In my daily work, I use Python to automate the generation of weekly and monthly reports. With pandas and openpyxl, I can quickly process large amounts of Excel data and generate charts automatically. This blog’s practical guides have helped me master these skills and greatly improved my efficiency!</p>]]></content><author><name>Emily</name></author><summary type="html"><![CDATA[Automating Office Reports with Python]]></summary></entry><entry><title type="html">Batch Email Sending</title><link href="http://localhost:4000/2018/08/21/apples/" rel="alternate" type="text/html" title="Batch Email Sending" /><published>2018-08-21T00:00:00+08:00</published><updated>2018-08-21T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/21/apples</id><content type="html" xml:base="http://localhost:4000/2018/08/21/apples/"><![CDATA[<p>Batch Email Sending with Python</p>
+In my daily work, I use Python to automate the generation of weekly and monthly reports. With pandas and openpyxl, I can quickly process large amounts of Excel data and generate charts automatically. This blog's practical guides have helped me master these skills and greatly improved my efficiency!]]></content><author><name>Emily</name></author><summary type="html"><![CDATA[Automating Office Reports with Python]]></summary></entry><entry><title type="html">Batch Email Sending</title><link href="http://localhost:4000/2018/08/21/apples/" rel="alternate" type="text/html" title="Batch Email Sending" /><published>2018-08-21T00:00:00+08:00</published><updated>2018-08-21T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/21/apples</id><content type="html" xml:base="http://localhost:4000/2018/08/21/apples/"><![CDATA[Batch Email Sending with Python
 
-<p>Thanks to the tutorials on this blog, I learned how to use Python’s smtplib and openpyxl to send personalized emails to hundreds of colleagues automatically. This not only saves time but also reduces manual errors in office communication.</p>]]></content><author><name>David</name></author><summary type="html"><![CDATA[Batch Email Sending with Python]]></summary></entry><entry><title type="html">Automating File Organization</title><link href="http://localhost:4000/2018/08/20/bananas/" rel="alternate" type="text/html" title="Automating File Organization" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/2018/08/20/bananas/"><![CDATA[<p>Automating File Organization with Python</p>
+Thanks to the tutorials on this blog, I learned how to use Python's smtplib and openpyxl to send personalized emails to hundreds of colleagues automatically. This not only saves time but also reduces manual errors in office communication.]]></content><author><name>David</name></author><summary type="html"><![CDATA[Batch Email Sending with Python]]></summary></entry><entry><title type="html">Automating File Organization</title><link href="http://localhost:4000/2018/08/20/bananas/" rel="alternate" type="text/html" title="Automating File Organization" /><published>2018-08-20T00:00:00+08:00</published><updated>2018-08-20T00:00:00+08:00</updated><id>http://localhost:4000/2018/08/20/bananas</id><content type="html" xml:base="http://localhost:4000/2018/08/20/bananas/"><![CDATA[Automating File Organization with Python
 
-<p>Inspired by this blog, I wrote a Python script to automatically organize and rename files in my office folders. Using os and shutil, I can keep everything tidy and easy to find. Python automation truly makes office work smarter!</p>]]></content><author><name>Sophia</name></author><summary type="html"><![CDATA[Automating File Organization with Python]]></summary></entry></feed>
+Inspired by this blog, I wrote a Python script to automatically organize and rename files in my office folders. Using os and shutil, I can keep everything tidy and easy to find. Python automation truly makes office work smarter!]]></content><author><name>Sophia</name></author><summary type="html"><![CDATA[Automating File Organization with Python]]></summary></entry></feed>
