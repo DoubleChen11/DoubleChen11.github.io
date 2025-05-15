@@ -5,6 +5,7 @@ source "https://rubygems.org"
 # gem "rails"
 gem "jekyll", "~> 4.2.0"
 gem "webrick", "~> 1.7"
+gem "jekyll-theme-primer", "~> 0.6.0"
 
 # Jekyll plugins
 group :jekyll_plugins do

@@ -65,11 +65,7 @@ disqus:
 google_analytics: UA-XXXXXXXXX-X
 
 # Theme settings
-primary_color: 2c3e50
-secondary_color: 3498db
-text_color: 333
-background_color: fff
-font_family: Helvetica Neue, Arial, sans-serif
+theme: jekyll-theme-primer
 
 # Author information
 author:
@@ -87,30 +83,18 @@ author:
 navigation:
   - title: 首页
     url: /
-    icon: home
   - title: 文章
     url: /posts/
-    icon: book
   - title: 分类
     url: /categories/
-    icon: folder
   - title: 标签
     url: /tags/
-    icon: tags
   - title: 关于
     url: /about/
-    icon: user
 
 # Footer
 footer:
   copyright: © 2024 DoubleChen11. All rights reserved.
-  links:
-    - title: 关于本站
-      url: /about/
-    - title: 联系方式
-      url: /contact/
-    - title: 隐私政策
-      url: /privacy/
 
 # SEO
 seo:
@@ -118,29 +102,6 @@ seo:
   description: 分享技术、生活和思考的个人博客
   keywords: 技术博客, 编程, Python, 自动化, 效率提升
   author: DoubleChen11
-  twitter:
-    card: summary_large_image
-    site: "@DoubleChen11"
-  og:
-    type: website
-    site_name: DoubleChen11's Blog
-    locale: zh_CN
-
-# Sitemap
-sitemap:
-  changefreq: weekly
-  priority: 0.8
-  exclude:
-    - /404.html
-    - /feed.xml
-    - /sitemap.xml
-
-# Feed
-feed:
-  path: feed.xml
-  limit: 20
-  categories: []
-  tags: []
 
 # Timezone
 timezone: Asia/Shanghai
