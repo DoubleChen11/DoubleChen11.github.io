@@ -119,7 +119,7 @@ future: false
 lsi: false
 
 # Relative links
-relative_links: true
+relative_links: false
 
 # Incremental build
 incremental: true

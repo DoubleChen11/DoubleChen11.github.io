@@ -3,9 +3,11 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem "jekyll", "~> 4.2.0"
+gem "github-pages", "~> 232"
+gem "jekyll", "~> 3.10.0"
 gem "webrick", "~> 1.7"
 gem "jekyll-theme-primer", "~> 0.6.0"
+gem "faraday-retry"
 
 # Jekyll plugins
 group :jekyll_plugins do
@@ -16,3 +18,4 @@ group :jekyll_plugins do
   gem "jekyll-gist", "~> 1.5"
   gem "jemoji", "~> 0.12"
 end
+
