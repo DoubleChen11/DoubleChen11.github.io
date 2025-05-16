@@ -49,14 +49,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="分享技术、生活和思考的个人博客" />
 <meta property="og:description" content="分享技术、生活和思考的个人博客" />
-<link rel="canonical" href="http://localhost:4000/categories/" />
-<meta property="og:url" content="http://localhost:4000/categories/" />
+<link rel="canonical" href="https://doublechen11.github.io/categories/" />
+<meta property="og:url" content="https://doublechen11.github.io/categories/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Categories" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Categories","url":"http://localhost:4000/categories/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Categories","url":"https://doublechen11.github.io/categories/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -108,9 +108,27 @@
         <span class="count">1</span>
       </a>
     
-      <a href="#自动化" class="category-item">
+      <a href="#python数据分析" class="category-item">
         <i class="fas fa-folder"></i>
-        自动化
+        Python数据分析
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#python自动化办公" class="category-item">
+        <i class="fas fa-folder"></i>
+        Python自动化办公
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#自动化测试" class="category-item">
+        <i class="fas fa-folder"></i>
+        自动化测试
+        <span class="count">1</span>
+      </a>
+    
+      <a href="#自动化运维" class="category-item">
+        <i class="fas fa-folder"></i>
+        自动化运维
         <span class="count">1</span>
       </a>
     
@@ -121,6 +139,7 @@
       <h2 class="category-title">
         <i class="fas fa-folder"></i>
         Python
+        <span class="category-count">(1 篇文章)</span>
       </h2>
       
       <div class="post-list">
@@ -128,19 +147,32 @@
         
           <article class="post-item">
             <h3 class="post-title">
-              <a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a>
+              <a href="/2024/03/21/python-basics/">Python基础教程：从入门到精通</a>
             </h3>
             <div class="post-meta">
               <i class="far fa-calendar"></i>
-              March 20, 2024
+              March 21, 2024
               
                 <i class="far fa-user"></i>
                 DoubleChen11
               
+              <div class="post-tags">
+                
+                  <a href="/tags/#python" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Python
+                  </a>
+                
+                  <a href="/tags/#编程基础" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    编程基础
+                  </a>
+                
+              </div>
             </div>
             
               <div class="post-excerpt">
-                Python 自动化办公实战：提高工作效率的利器 引言 在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。 实战案例 1. Excel数据处理自动化 应用场景 在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。 代码实现 import pandas as pd import openpyxl from openpyxl.styles import PatternFill, Font def process_excel_data(input_file, output_file): # 读取Excel文件 df = pd.read_excel(input_file) # 数据清洗 df = df.dropna() # 删除空值 df = df.drop_duplicates() # 删除重复值 # 数据统计 summary = df.describe() # 保存处理后的数据 with pd.ExcelWriter(output_file)...
+                Python基础教程：从入门到精通 引言 Python作为一门简单易学且功能强大的编程语言，已经成为最受欢迎的编程语言之一。本文将带你从零开始学习Python，掌握Python的基础知识。 Python基础语法 1. 变量和数据类型 Python中的基本数据类型包括： 整数(int) 浮点数(float) 字符串(str) 布尔值(bool) 列表(list) 元组(tuple) 字典(dict) 2. 控制流程 Python提供了丰富的控制流程语句： if-elif-else条件语句 for循环 while循环 break和continue语句 3. 函数定义 Python函数的定义和使用非常简单： def greet(name): return f"Hello, {name}!" 实践练习 让我们通过一个简单的例子来练习Python基础语法： # 计算斐波那契数列 def fibonacci(n): if n &lt;= 0: return [] elif n == 1: return [0] elif n ==...
               </div>
             
           </article>
@@ -148,10 +180,56 @@
       </div>
     </div>
   
-    <div id="自动化" class="category-section">
+    <div id="python数据分析" class="category-section">
       <h2 class="category-title">
         <i class="fas fa-folder"></i>
-        自动化
+        Python数据分析
+        <span class="category-count">(1 篇文章)</span>
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/21/python-data-analysis/">Python数据分析：使用Pandas和NumPy进行数据处理</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 21, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+              <div class="post-tags">
+                
+                  <a href="/tags/#python" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Python
+                  </a>
+                
+                  <a href="/tags/#数据分析" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    数据分析
+                  </a>
+                
+              </div>
+            </div>
+            
+              <div class="post-excerpt">
+                Python数据分析：使用Pandas和NumPy进行数据处理 引言 在数据科学领域，Python是最受欢迎的编程语言之一。本文将介绍如何使用Pandas和NumPy这两个强大的库来进行数据分析。 数据处理基础 1. NumPy数组操作 import numpy as np # 创建数组 arr = np.array([1, 2, 3, 4, 5]) # 数组运算 arr_squared = arr ** 2 # 统计计算 mean = np.mean(arr) std = np.std(arr) 2. Pandas数据处理 import pandas as pd # 创建DataFrame df = pd.DataFrame({ 'name': ['Alice', 'Bob', 'Charlie'], 'age':...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="python自动化办公" class="category-section">
+      <h2 class="category-title">
+        <i class="fas fa-folder"></i>
+        Python自动化办公
+        <span class="category-count">(1 篇文章)</span>
       </h2>
       
       <div class="post-list">
@@ -168,6 +246,24 @@
                 <i class="far fa-user"></i>
                 DoubleChen11
               
+              <div class="post-tags">
+                
+                  <a href="/tags/#python" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Python
+                  </a>
+                
+                  <a href="/tags/#办公自动化" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    办公自动化
+                  </a>
+                
+                  <a href="/tags/#excel" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Excel
+                  </a>
+                
+              </div>
             </div>
             
               <div class="post-excerpt">
@@ -179,7 +275,237 @@
       </div>
     </div>
   
-</div> 
+    <div id="自动化测试" class="category-section">
+      <h2 class="category-title">
+        <i class="fas fa-folder"></i>
+        自动化测试
+        <span class="category-count">(1 篇文章)</span>
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/21/automated-testing/">Python自动化测试实战指南</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 21, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+              <div class="post-tags">
+                
+                  <a href="/tags/#python" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Python
+                  </a>
+                
+                  <a href="/tags/#自动化测试" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    自动化测试
+                  </a>
+                
+                  <a href="/tags/#测试框架" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    测试框架
+                  </a>
+                
+              </div>
+            </div>
+            
+              <div class="post-excerpt">
+                Python自动化测试实战指南 引言 在软件开发过程中，自动化测试是保证软件质量的重要手段。本文将介绍如何使用Python进行自动化测试，包括单元测试、集成测试和端到端测试。 自动化测试框架 1. unittest框架 Python内置的unittest框架是最基础的测试框架： import unittest class TestCalculator(unittest.TestCase): def test_addition(self): self.assertEqual(1 + 1, 2) def test_subtraction(self): self.assertEqual(3 - 1, 2) if __name__ == '__main__': unittest.main() 2. pytest框架 pytest是一个更现代和强大的测试框架： def test_calculator(): assert 1 + 1 == 2 assert 3 - 1 == 2 自动化测试实践 1. 单元测试 单元测试是测试代码的最小可测试单元： def...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+    <div id="自动化运维" class="category-section">
+      <h2 class="category-title">
+        <i class="fas fa-folder"></i>
+        自动化运维
+        <span class="category-count">(1 篇文章)</span>
+      </h2>
+      
+      <div class="post-list">
+        
+        
+          <article class="post-item">
+            <h3 class="post-title">
+              <a href="/2024/03/21/automated-ops/">Python自动化运维：使用Ansible和SaltStack</a>
+            </h3>
+            <div class="post-meta">
+              <i class="far fa-calendar"></i>
+              March 21, 2024
+              
+                <i class="far fa-user"></i>
+                DoubleChen11
+              
+              <div class="post-tags">
+                
+                  <a href="/tags/#运维自动化" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    运维自动化
+                  </a>
+                
+                  <a href="/tags/#python" class="tag-link">
+                    <i class="fas fa-tag"></i>
+                    Python
+                  </a>
+                
+              </div>
+            </div>
+            
+              <div class="post-excerpt">
+                Python自动化运维：使用Ansible和SaltStack 引言 在现代IT运维中，自动化已经成为提高效率的关键。本文将介绍如何使用Python结合Ansible和SaltStack来实现自动化运维。 Ansible自动化 1. 基础配置 # inventory.yml [webservers] web1 ansible_host=192.168.1.10 web2 ansible_host=192.168.1.11 [databases] db1 ansible_host=192.168.1.20 2. Playbook示例 # deploy_web.yml --- - hosts: webservers tasks: - name: 安装Nginx apt: name: nginx state: present - name: 启动Nginx服务 service: name: nginx state: started enabled: yes SaltStack自动化 1. 状态文件 # /srv/salt/webserver/init.sls nginx: pkg.installed:...
+              </div>
+            
+          </article>
+        
+      </div>
+    </div>
+  
+</div>
+
+<style>
+.categories-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.category-item:hover {
+  background-color: #e0e0e0;
+}
+
+.category-item i {
+  margin-right: 0.5rem;
+}
+
+.count {
+  margin-left: 0.5rem;
+  background-color: #666;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.category-section {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.category-title i {
+  margin-right: 0.5rem;
+  color: #666;
+}
+
+.category-count {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-title {
+  margin: 0 0 1rem 0;
+}
+
+.post-title a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.post-title a:hover {
+  color: #007bff;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.post-meta i {
+  margin-right: 0.3rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-link {
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background-color 0.3s;
+}
+
+.tag-link:hover {
+  background-color: #e0e0e0;
+}
+
+.post-excerpt {
+  color: #666;
+  line-height: 1.6;
+}
+</style> 
       </div>
     </main>
 

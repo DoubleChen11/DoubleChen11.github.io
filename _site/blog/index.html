@@ -49,14 +49,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="分享技术、生活和思考的个人博客" />
 <meta property="og:description" content="分享技术、生活和思考的个人博客" />
-<link rel="canonical" href="http://localhost:4000/blog/" />
-<meta property="og:url" content="http://localhost:4000/blog/" />
+<link rel="canonical" href="https://doublechen11.github.io/blog/" />
+<meta property="og:url" content="https://doublechen11.github.io/blog/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Blog","url":"http://localhost:4000/blog/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Blog","url":"https://doublechen11.github.io/blog/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -99,6 +99,395 @@
         <h1>Latest Posts</h1>
 
 <ul>
+  
+    <li>
+      <h2><a href="/2024/03/21/python-data-analysis/">Python数据分析：使用Pandas和NumPy进行数据处理</a></h2>
+      <h1 id="python数据分析使用pandas和numpy进行数据处理">Python数据分析：使用Pandas和NumPy进行数据处理</h1>
+
+<h2 id="引言">引言</h2>
+<p>在数据科学领域，Python是最受欢迎的编程语言之一。本文将介绍如何使用Pandas和NumPy这两个强大的库来进行数据分析。</p>
+
+<h2 id="数据处理基础">数据处理基础</h2>
+
+<h3 id="1-numpy数组操作">1. NumPy数组操作</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="c1"># 创建数组
+</span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="c1"># 数组运算
+</span><span class="n">arr_squared</span> <span class="o">=</span> <span class="n">arr</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="c1"># 统计计算
+</span><span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="2-pandas数据处理">2. Pandas数据处理</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+
+<span class="c1"># 创建DataFrame
+</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Alice'</span><span class="p">,</span> <span class="s">'Bob'</span><span class="p">,</span> <span class="s">'Charlie'</span><span class="p">],</span>
+    <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
+    <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">70000</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># 数据筛选
+</span><span class="n">high_salary</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">55000</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="数据可视化">数据可视化</h2>
+
+<h3 id="1-使用matplotlib">1. 使用Matplotlib</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="c1"># 创建折线图
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'age'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">],</span> <span class="s">'o-'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'年龄与薪资关系'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'年龄'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'薪资'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="2-使用seaborn">2. 使用Seaborn</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+
+<span class="c1"># 创建箱线图
+</span><span class="n">sns</span><span class="p">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="数据分析案例">数据分析案例</h2>
+
+<h3 id="1-数据清洗">1. 数据清洗</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 处理缺失值
+</span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="c1"># 处理重复值
+</span><span class="n">df_unique</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="2-数据聚合">2. 数据聚合</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 按年龄分组统计
+</span><span class="n">age_stats</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'age'</span><span class="p">).</span><span class="n">agg</span><span class="p">({</span>
+    <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="s">'mean'</span><span class="p">,</span> <span class="s">'std'</span><span class="p">,</span> <span class="s">'count'</span><span class="p">]</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h2 id="高级分析技术">高级分析技术</h2>
+
+<h3 id="1-时间序列分析">1. 时间序列分析</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建时间序列数据
+</span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="s">'2024-01-01'</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+<span class="c1"># 计算移动平均
+</span><span class="n">ma</span> <span class="o">=</span> <span class="n">ts</span><span class="p">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">).</span><span class="n">mean</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="2-数据透视表">2. 数据透视表</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建数据透视表
+</span><span class="n">pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> 
+    <span class="n">values</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span>
+    <span class="n">index</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span>
+    <span class="n">columns</span><span class="o">=</span><span class="s">'name'</span><span class="p">,</span>
+    <span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="总结">总结</h2>
+<p>通过本文的学习，你已经了解了使用Python进行数据分析的基本方法。Pandas和NumPy这两个库为数据分析提供了强大的工具。</p>
+
+<h2 id="下一步学习建议">下一步学习建议</h2>
+<ol>
+  <li>深入学习Pandas的高级特性</li>
+  <li>学习数据可视化技术</li>
+  <li>了解机器学习基础</li>
+  <li>掌握数据清洗技巧</li>
+  <li>学习大数据处理技术</li>
+</ol>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2024/03/21/python-basics/">Python基础教程：从入门到精通</a></h2>
+      <h1 id="python基础教程从入门到精通">Python基础教程：从入门到精通</h1>
+
+<h2 id="引言">引言</h2>
+<p>Python作为一门简单易学且功能强大的编程语言，已经成为最受欢迎的编程语言之一。本文将带你从零开始学习Python，掌握Python的基础知识。</p>
+
+<h2 id="python基础语法">Python基础语法</h2>
+
+<h3 id="1-变量和数据类型">1. 变量和数据类型</h3>
+<p>Python中的基本数据类型包括：</p>
+<ul>
+  <li>整数(int)</li>
+  <li>浮点数(float)</li>
+  <li>字符串(str)</li>
+  <li>布尔值(bool)</li>
+  <li>列表(list)</li>
+  <li>元组(tuple)</li>
+  <li>字典(dict)</li>
+</ul>
+
+<h3 id="2-控制流程">2. 控制流程</h3>
+<p>Python提供了丰富的控制流程语句：</p>
+<ul>
+  <li>if-elif-else条件语句</li>
+  <li>for循环</li>
+  <li>while循环</li>
+  <li>break和continue语句</li>
+</ul>
+
+<h3 id="3-函数定义">3. 函数定义</h3>
+<p>Python函数的定义和使用非常简单：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">!"</span>
+</code></pre></div></div>
+
+<h2 id="实践练习">实践练习</h2>
+<p>让我们通过一个简单的例子来练习Python基础语法：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 计算斐波那契数列
+</span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[]</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    
+    <span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+        <span class="n">fib</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">fib</span>
+
+<span class="c1"># 测试函数
+</span><span class="k">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h2 id="总结">总结</h2>
+<p>通过本文的学习，你已经掌握了Python的基础语法和核心概念。接下来，你可以继续深入学习Python的高级特性，如面向对象编程、模块和包的使用等。</p>
+
+<h2 id="下一步学习建议">下一步学习建议</h2>
+<ol>
+  <li>深入学习Python标准库</li>
+  <li>学习Python面向对象编程</li>
+  <li>了解Python的异常处理机制</li>
+  <li>掌握Python的文件操作</li>
+  <li>学习Python的模块和包管理</li>
+</ol>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2024/03/21/automated-testing/">Python自动化测试实战指南</a></h2>
+      <h1 id="python自动化测试实战指南">Python自动化测试实战指南</h1>
+
+<h2 id="引言">引言</h2>
+<p>在软件开发过程中，自动化测试是保证软件质量的重要手段。本文将介绍如何使用Python进行自动化测试，包括单元测试、集成测试和端到端测试。</p>
+
+<h2 id="自动化测试框架">自动化测试框架</h2>
+
+<h3 id="1-unittest框架">1. unittest框架</h3>
+<p>Python内置的unittest框架是最基础的测试框架：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">unittest</span>
+
+<span class="k">class</span> <span class="nc">TestCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">test_addition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">test_subtraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="p">.</span><span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h3 id="2-pytest框架">2. pytest框架</h3>
+<p>pytest是一个更现代和强大的测试框架：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_calculator</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+</code></pre></div></div>
+
+<h2 id="自动化测试实践">自动化测试实践</h2>
+
+<h3 id="1-单元测试">1. 单元测试</h3>
+<p>单元测试是测试代码的最小可测试单元：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_user_creation</span><span class="p">():</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s">"test_user"</span><span class="p">,</span> <span class="s">"test@example.com"</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">user</span><span class="p">.</span><span class="n">username</span> <span class="o">==</span> <span class="s">"test_user"</span>
+    <span class="k">assert</span> <span class="n">user</span><span class="p">.</span><span class="n">email</span> <span class="o">==</span> <span class="s">"test@example.com"</span>
+</code></pre></div></div>
+
+<h3 id="2-集成测试">2. 集成测试</h3>
+<p>集成测试验证多个组件之间的交互：</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_user_login</span><span class="p">():</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s">"test_user"</span><span class="p">,</span> <span class="s">"test@example.com"</span><span class="p">)</span>
+    <span class="n">auth</span> <span class="o">=</span> <span class="n">Authentication</span><span class="p">()</span>
+    <span class="k">assert</span> <span class="n">auth</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span>
+</code></pre></div></div>
+
+<h2 id="测试最佳实践">测试最佳实践</h2>
+
+<ol>
+  <li>测试用例命名要清晰明确</li>
+  <li>每个测试用例只测试一个功能点</li>
+  <li>使用测试夹具(fixtures)管理测试数据</li>
+  <li>保持测试代码的可维护性</li>
+  <li>定期运行自动化测试</li>
+</ol>
+
+<h2 id="总结">总结</h2>
+<p>通过本文的学习，你已经了解了Python自动化测试的基本概念和实践方法。在实际项目中，选择合适的测试框架和测试策略，可以大大提高软件质量和开发效率。</p>
+
+<h2 id="下一步学习建议">下一步学习建议</h2>
+<ol>
+  <li>深入学习pytest的高级特性</li>
+  <li>学习测试驱动开发(TDD)</li>
+  <li>了解持续集成中的自动化测试</li>
+  <li>掌握性能测试和负载测试</li>
+  <li>学习测试覆盖率分析</li>
+</ol>
+
+    </li>
+  
+    <li>
+      <h2><a href="/2024/03/21/automated-ops/">Python自动化运维：使用Ansible和SaltStack</a></h2>
+      <h1 id="python自动化运维使用ansible和saltstack">Python自动化运维：使用Ansible和SaltStack</h1>
+
+<h2 id="引言">引言</h2>
+<p>在现代IT运维中，自动化已经成为提高效率的关键。本文将介绍如何使用Python结合Ansible和SaltStack来实现自动化运维。</p>
+
+<h2 id="ansible自动化">Ansible自动化</h2>
+
+<h3 id="1-基础配置">1. 基础配置</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># inventory.yml</span>
+<span class="pi">[</span><span class="nv">webservers</span><span class="pi">]</span>
+<span class="s">web1 ansible_host=192.168.1.10</span>
+<span class="s">web2 ansible_host=192.168.1.11</span>
+
+<span class="pi">[</span><span class="nv">databases</span><span class="pi">]</span>
+<span class="s">db1 ansible_host=192.168.1.20</span>
+</code></pre></div></div>
+
+<h3 id="2-playbook示例">2. Playbook示例</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># deploy_web.yml</span>
+<span class="nn">---</span>
+<span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span> <span class="s">webservers</span>
+  <span class="na">tasks</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">安装Nginx</span>
+      <span class="na">apt</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
+    
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">启动Nginx服务</span>
+      <span class="na">service</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+        <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
+        <span class="na">enabled</span><span class="pi">:</span> <span class="s">yes</span>
+</code></pre></div></div>
+
+<h2 id="saltstack自动化">SaltStack自动化</h2>
+
+<h3 id="1-状态文件">1. 状态文件</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># /srv/salt/webserver/init.sls</span>
+<span class="na">nginx</span><span class="pi">:</span>
+  <span class="na">pkg.installed</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+  
+  <span class="na">service.running</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
+    <span class="pi">-</span> <span class="na">enable</span><span class="pi">:</span> <span class="s">True</span>
+</code></pre></div></div>
+
+<h3 id="2-执行命令">2. 执行命令</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 应用状态</span>
+salt <span class="s1">'*'</span> state.apply webserver
+
+<span class="c"># 执行远程命令</span>
+salt <span class="s1">'*'</span> cmd.run <span class="s1">'systemctl status nginx'</span>
+</code></pre></div></div>
+
+<h2 id="监控系统">监控系统</h2>
+
+<h3 id="1-使用prometheus">1. 使用Prometheus</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">prometheus_client</span> <span class="kn">import</span> <span class="n">start_http_server</span><span class="p">,</span> <span class="n">Gauge</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># 创建指标
+</span><span class="n">cpu_usage</span> <span class="o">=</span> <span class="n">Gauge</span><span class="p">(</span><span class="s">'cpu_usage'</span><span class="p">,</span> <span class="s">'CPU使用率'</span><span class="p">)</span>
+<span class="n">memory_usage</span> <span class="o">=</span> <span class="n">Gauge</span><span class="p">(</span><span class="s">'memory_usage'</span><span class="p">,</span> <span class="s">'内存使用率'</span><span class="p">)</span>
+
+<span class="c1"># 启动HTTP服务器
+</span><span class="n">start_http_server</span><span class="p">(</span><span class="mi">8000</span><span class="p">)</span>
+
+<span class="c1"># 更新指标
+</span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">cpu_usage</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">get_cpu_usage</span><span class="p">())</span>
+    <span class="n">memory_usage</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">get_memory_usage</span><span class="p">())</span>
+    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="2-告警配置">2. 告警配置</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># alertmanager.yml</span>
+<span class="na">groups</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">example</span>
+  <span class="na">rules</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">HighCPUUsage</span>
+    <span class="na">expr</span><span class="pi">:</span> <span class="s">cpu_usage &gt; </span><span class="m">80</span>
+    <span class="na">for</span><span class="pi">:</span> <span class="s">5m</span>
+    <span class="na">labels</span><span class="pi">:</span>
+      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
+    <span class="na">annotations</span><span class="pi">:</span>
+      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">高CPU使用率"</span>
+      <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">服务器</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.instance</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">CPU使用率超过80%"</span>
+</code></pre></div></div>
+
+<h2 id="自动化脚本">自动化脚本</h2>
+
+<h3 id="1-日志分析">1. 日志分析</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+
+<span class="k">def</span> <span class="nf">analyze_logs</span><span class="p">(</span><span class="n">log_file</span><span class="p">):</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">logs</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
+    
+    <span class="c1"># 统计错误类型
+</span>    <span class="n">errors</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">log</span> <span class="ow">in</span> <span class="n">logs</span><span class="p">:</span>
+        <span class="k">if</span> <span class="s">'ERROR'</span> <span class="ow">in</span> <span class="n">log</span><span class="p">:</span>
+            <span class="n">error_type</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s">'ERROR: (.*)'</span><span class="p">,</span> <span class="n">log</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">error_type</span><span class="p">:</span>
+                <span class="n">errors</span><span class="p">[</span><span class="n">error_type</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">errors</span>
+</code></pre></div></div>
+
+<h3 id="2-系统健康检查">2. 系统健康检查</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_system_health</span><span class="p">():</span>
+    <span class="n">checks</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s">'disk_usage'</span><span class="p">:</span> <span class="n">check_disk_usage</span><span class="p">(),</span>
+        <span class="s">'memory_usage'</span><span class="p">:</span> <span class="n">check_memory_usage</span><span class="p">(),</span>
+        <span class="s">'cpu_usage'</span><span class="p">:</span> <span class="n">check_cpu_usage</span><span class="p">(),</span>
+        <span class="s">'service_status'</span><span class="p">:</span> <span class="n">check_services</span><span class="p">()</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">checks</span><span class="p">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">checks</span>
+</code></pre></div></div>
+
+<h2 id="总结">总结</h2>
+<p>通过本文的学习，你已经了解了如何使用Python结合Ansible和SaltStack来实现自动化运维。这些工具可以帮助你提高运维效率，减少人为错误。</p>
+
+<h2 id="下一步学习建议">下一步学习建议</h2>
+<ol>
+  <li>深入学习Ansible的高级特性</li>
+  <li>学习SaltStack的配置管理</li>
+  <li>了解容器化运维</li>
+  <li>掌握监控系统搭建</li>
+  <li>学习自动化测试在运维中的应用</li>
+</ol>
+
+    </li>
   
     <li>
       <h2><a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a></h2>

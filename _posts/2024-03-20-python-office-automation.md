@@ -2,8 +2,8 @@
 layout: post
 title: "Python 自动化办公实战：提高工作效率的利器"
 date: 2024-03-20
-categories: [Python, 自动化]
-tags: [Python, 办公自动化, Excel, 邮件, 效率提升]
+categories: [Python自动化办公]
+tags: [Python, 办公自动化, Excel]
 author: DoubleChen11
 description: "本文详细介绍Python在办公自动化中的应用，包括Excel数据处理、自动发送邮件等实用案例，帮助读者提高工作效率。"
 ---
