@@ -1,15 +1,207 @@
 ---
 layout: default
 title: Staff
+permalink: /staff/
 ---
-<h1>Staff</h1>
 
-<ul>
-  {% for author in site.authors %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <h3>{{ author.position }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul>
+<div class="staff-page">
+  <h1 class="page-title">Our Team</h1>
+
+  <div class="staff-grid">
+    {% for author in site.authors %}
+      <div class="staff-card">
+        <div class="staff-image">
+          {% if author.image %}
+            <img src="{{ author.image | relative_url }}" alt="{{ author.name }}">
+          {% else %}
+            <div class="staff-image-placeholder">
+              <i class="fas fa-user"></i>
+            </div>
+          {% endif %}
+        </div>
+        
+        <div class="staff-info">
+          <h2 class="staff-name">
+            <a href="{{ author.url | relative_url }}">{{ author.name }}</a>
+          </h2>
+          
+          {% if author.position %}
+            <h3 class="staff-position">{{ author.position }}</h3>
+          {% endif %}
+          
+          <div class="staff-content">
+            {{ author.content | markdownify }}
+          </div>
+          
+          {% if author.social %}
+            <div class="staff-social">
+              {% if author.social.github %}
+                <a href="https://github.com/{{ author.social.github }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i>
+                </a>
+              {% endif %}
+              
+              {% if author.social.twitter %}
+                <a href="https://twitter.com/{{ author.social.twitter }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              {% endif %}
+              
+              {% if author.social.linkedin %}
+                <a href="https://linkedin.com/in/{{ author.social.linkedin }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              {% endif %}
+              
+              {% if author.social.email %}
+                <a href="mailto:{{ author.social.email }}">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.staff-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.staff-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.staff-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.staff-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.staff-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+}
+
+.staff-image-placeholder i {
+  font-size: 5rem;
+  color: #adb5bd;
+}
+
+.staff-info {
+  padding: 2rem;
+}
+
+.staff-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.staff-name a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.staff-name a:hover {
+  color: #3498db;
+}
+
+.staff-position {
+  margin: 0 0 1rem 0;
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.staff-content {
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.staff-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.staff-social a {
+  color: #6c757d;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.staff-social a:hover {
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .staff-page {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .staff-image {
+    height: 250px;
+  }
+  
+  .staff-info {
+    padding: 1.5rem;
+  }
+  
+  .staff-name {
+    font-size: 1.3rem;
+  }
+  
+  .staff-position {
+    font-size: 1rem;
+  }
+}
+</style>

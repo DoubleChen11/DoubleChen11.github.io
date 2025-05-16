@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - DoubleChen11's Blog</title>
-    <meta name="description" content="分享技术、生活和思考的个人博客">
+    <meta name="description" content="A personal blog sharing technology, life, and thoughts">
     
     <!-- MathJax Support -->
     <script type="text/javascript" async
@@ -47,8 +47,8 @@
 <meta property="og:title" content="Blog" />
 <meta name="author" content="DoubleChen11" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="分享技术、生活和思考的个人博客" />
-<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<meta name="description" content="A personal blog sharing technology, life, and thoughts" />
+<meta property="og:description" content="A personal blog sharing technology, life, and thoughts" />
 <link rel="canonical" href="https://doublechen11.github.io/blog/" />
 <meta property="og:url" content="https://doublechen11.github.io/blog/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Blog","url":"https://doublechen11.github.io/blog/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"A personal blog sharing technology, life, and thoughts","headline":"Blog","url":"https://doublechen11.github.io/blog/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -96,638 +96,565 @@
 
     <main class="site-content">
       <div class="container">
-        <h1>Latest Posts</h1>
+        <div class="blog-page">
+  <h1 class="page-title">Latest Posts</h1>
 
-<ul>
-  
-    <li>
-      <h2><a href="/2024/03/21/python-data-analysis/">Python数据分析：使用Pandas和NumPy进行数据处理</a></h2>
-      <h1 id="python数据分析使用pandas和numpy进行数据处理">Python数据分析：使用Pandas和NumPy进行数据处理</h1>
-
-<h2 id="引言">引言</h2>
-<p>在数据科学领域，Python是最受欢迎的编程语言之一。本文将介绍如何使用Pandas和NumPy这两个强大的库来进行数据分析。</p>
-
-<h2 id="数据处理基础">数据处理基础</h2>
-
-<h3 id="1-numpy数组操作">1. NumPy数组操作</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-
-<span class="c1"># 创建数组
-</span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-<span class="c1"># 数组运算
-</span><span class="n">arr_squared</span> <span class="o">=</span> <span class="n">arr</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="c1"># 统计计算
-</span><span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-<span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="2-pandas数据处理">2. Pandas数据处理</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-
-<span class="c1"># 创建DataFrame
-</span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Alice'</span><span class="p">,</span> <span class="s">'Bob'</span><span class="p">,</span> <span class="s">'Charlie'</span><span class="p">],</span>
-    <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
-    <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">70000</span><span class="p">]</span>
-<span class="p">})</span>
-
-<span class="c1"># 数据筛选
-</span><span class="n">high_salary</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">55000</span><span class="p">]</span>
-</code></pre></div></div>
-
-<h2 id="数据可视化">数据可视化</h2>
-
-<h3 id="1-使用matplotlib">1. 使用Matplotlib</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="c1"># 创建折线图
-</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'age'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">],</span> <span class="s">'o-'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'年龄与薪资关系'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'年龄'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'薪资'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h3 id="2-使用seaborn">2. 使用Seaborn</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
-
-<span class="c1"># 创建箱线图
-</span><span class="n">sns</span><span class="p">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h2 id="数据分析案例">数据分析案例</h2>
-
-<h3 id="1-数据清洗">1. 数据清洗</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 处理缺失值
-</span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="c1"># 处理重复值
-</span><span class="n">df_unique</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h3 id="2-数据聚合">2. 数据聚合</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 按年龄分组统计
-</span><span class="n">age_stats</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'age'</span><span class="p">).</span><span class="n">agg</span><span class="p">({</span>
-    <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="s">'mean'</span><span class="p">,</span> <span class="s">'std'</span><span class="p">,</span> <span class="s">'count'</span><span class="p">]</span>
-<span class="p">})</span>
-</code></pre></div></div>
-
-<h2 id="高级分析技术">高级分析技术</h2>
-
-<h3 id="1-时间序列分析">1. 时间序列分析</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建时间序列数据
-</span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="s">'2024-01-01'</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
-<span class="c1"># 计算移动平均
-</span><span class="n">ma</span> <span class="o">=</span> <span class="n">ts</span><span class="p">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">).</span><span class="n">mean</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h3 id="2-数据透视表">2. 数据透视表</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建数据透视表
-</span><span class="n">pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> 
-    <span class="n">values</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span>
-    <span class="n">index</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span>
-    <span class="n">columns</span><span class="o">=</span><span class="s">'name'</span><span class="p">,</span>
-    <span class="n">aggfunc</span><span class="o">=</span><span class="s">'mean'</span>
-<span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="总结">总结</h2>
-<p>通过本文的学习，你已经了解了使用Python进行数据分析的基本方法。Pandas和NumPy这两个库为数据分析提供了强大的工具。</p>
-
-<h2 id="下一步学习建议">下一步学习建议</h2>
-<ol>
-  <li>深入学习Pandas的高级特性</li>
-  <li>学习数据可视化技术</li>
-  <li>了解机器学习基础</li>
-  <li>掌握数据清洗技巧</li>
-  <li>学习大数据处理技术</li>
-</ol>
-
-    </li>
-  
-    <li>
-      <h2><a href="/2024/03/21/python-basics/">Python基础教程：从入门到精通</a></h2>
-      <h1 id="python基础教程从入门到精通">Python基础教程：从入门到精通</h1>
-
-<h2 id="引言">引言</h2>
-<p>Python作为一门简单易学且功能强大的编程语言，已经成为最受欢迎的编程语言之一。本文将带你从零开始学习Python，掌握Python的基础知识。</p>
-
-<h2 id="python基础语法">Python基础语法</h2>
-
-<h3 id="1-变量和数据类型">1. 变量和数据类型</h3>
-<p>Python中的基本数据类型包括：</p>
-<ul>
-  <li>整数(int)</li>
-  <li>浮点数(float)</li>
-  <li>字符串(str)</li>
-  <li>布尔值(bool)</li>
-  <li>列表(list)</li>
-  <li>元组(tuple)</li>
-  <li>字典(dict)</li>
-</ul>
-
-<h3 id="2-控制流程">2. 控制流程</h3>
-<p>Python提供了丰富的控制流程语句：</p>
-<ul>
-  <li>if-elif-else条件语句</li>
-  <li>for循环</li>
-  <li>while循环</li>
-  <li>break和continue语句</li>
-</ul>
-
-<h3 id="3-函数定义">3. 函数定义</h3>
-<p>Python函数的定义和使用非常简单：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">!"</span>
-</code></pre></div></div>
-
-<h2 id="实践练习">实践练习</h2>
-<p>让我们通过一个简单的例子来练习Python基础语法：</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 计算斐波那契数列
-</span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[]</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="k">return</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+  <div class="post-list">
     
-    <span class="n">fib</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="n">fib</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">fib</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-    <span class="k">return</span> <span class="n">fib</span>
-
-<span class="c1"># 测试函数
-</span><span class="k">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
-</code></pre></div></div>
-
-<h2 id="总结">总结</h2>
-<p>通过本文的学习，你已经掌握了Python的基础语法和核心概念。接下来，你可以继续深入学习Python的高级特性，如面向对象编程、模块和包的使用等。</p>
-
-<h2 id="下一步学习建议">下一步学习建议</h2>
-<ol>
-  <li>深入学习Python标准库</li>
-  <li>学习Python面向对象编程</li>
-  <li>了解Python的异常处理机制</li>
-  <li>掌握Python的文件操作</li>
-  <li>学习Python的模块和包管理</li>
-</ol>
-
-    </li>
-  
-    <li>
-      <h2><a href="/2024/03/21/automated-testing/">Python自动化测试实战指南</a></h2>
-      <h1 id="python自动化测试实战指南">Python自动化测试实战指南</h1>
-
-<h2 id="引言">引言</h2>
-<p>在软件开发过程中，自动化测试是保证软件质量的重要手段。本文将介绍如何使用Python进行自动化测试，包括单元测试、集成测试和端到端测试。</p>
-
-<h2 id="自动化测试框架">自动化测试框架</h2>
-
-<h3 id="1-unittest框架">1. unittest框架</h3>
-<p>Python内置的unittest框架是最基础的测试框架：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">unittest</span>
-
-<span class="k">class</span> <span class="nc">TestCalculator</span><span class="p">(</span><span class="n">unittest</span><span class="p">.</span><span class="n">TestCase</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">test_addition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="nf">test_subtraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="bp">self</span><span class="p">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
-    <span class="n">unittest</span><span class="p">.</span><span class="n">main</span><span class="p">()</span>
-</code></pre></div></div>
-
-<h3 id="2-pytest框架">2. pytest框架</h3>
-<p>pytest是一个更现代和强大的测试框架：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_calculator</span><span class="p">():</span>
-    <span class="k">assert</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
-    <span class="k">assert</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
-</code></pre></div></div>
-
-<h2 id="自动化测试实践">自动化测试实践</h2>
-
-<h3 id="1-单元测试">1. 单元测试</h3>
-<p>单元测试是测试代码的最小可测试单元：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_user_creation</span><span class="p">():</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s">"test_user"</span><span class="p">,</span> <span class="s">"test@example.com"</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">user</span><span class="p">.</span><span class="n">username</span> <span class="o">==</span> <span class="s">"test_user"</span>
-    <span class="k">assert</span> <span class="n">user</span><span class="p">.</span><span class="n">email</span> <span class="o">==</span> <span class="s">"test@example.com"</span>
-</code></pre></div></div>
-
-<h3 id="2-集成测试">2. 集成测试</h3>
-<p>集成测试验证多个组件之间的交互：</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">test_user_login</span><span class="p">():</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="s">"test_user"</span><span class="p">,</span> <span class="s">"test@example.com"</span><span class="p">)</span>
-    <span class="n">auth</span> <span class="o">=</span> <span class="n">Authentication</span><span class="p">()</span>
-    <span class="k">assert</span> <span class="n">auth</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="o">==</span> <span class="bp">True</span>
-</code></pre></div></div>
-
-<h2 id="测试最佳实践">测试最佳实践</h2>
-
-<ol>
-  <li>测试用例命名要清晰明确</li>
-  <li>每个测试用例只测试一个功能点</li>
-  <li>使用测试夹具(fixtures)管理测试数据</li>
-  <li>保持测试代码的可维护性</li>
-  <li>定期运行自动化测试</li>
-</ol>
-
-<h2 id="总结">总结</h2>
-<p>通过本文的学习，你已经了解了Python自动化测试的基本概念和实践方法。在实际项目中，选择合适的测试框架和测试策略，可以大大提高软件质量和开发效率。</p>
-
-<h2 id="下一步学习建议">下一步学习建议</h2>
-<ol>
-  <li>深入学习pytest的高级特性</li>
-  <li>学习测试驱动开发(TDD)</li>
-  <li>了解持续集成中的自动化测试</li>
-  <li>掌握性能测试和负载测试</li>
-  <li>学习测试覆盖率分析</li>
-</ol>
-
-    </li>
-  
-    <li>
-      <h2><a href="/2024/03/21/automated-ops/">Python自动化运维：使用Ansible和SaltStack</a></h2>
-      <h1 id="python自动化运维使用ansible和saltstack">Python自动化运维：使用Ansible和SaltStack</h1>
-
-<h2 id="引言">引言</h2>
-<p>在现代IT运维中，自动化已经成为提高效率的关键。本文将介绍如何使用Python结合Ansible和SaltStack来实现自动化运维。</p>
-
-<h2 id="ansible自动化">Ansible自动化</h2>
-
-<h3 id="1-基础配置">1. 基础配置</h3>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># inventory.yml</span>
-<span class="pi">[</span><span class="nv">webservers</span><span class="pi">]</span>
-<span class="s">web1 ansible_host=192.168.1.10</span>
-<span class="s">web2 ansible_host=192.168.1.11</span>
-
-<span class="pi">[</span><span class="nv">databases</span><span class="pi">]</span>
-<span class="s">db1 ansible_host=192.168.1.20</span>
-</code></pre></div></div>
-
-<h3 id="2-playbook示例">2. Playbook示例</h3>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># deploy_web.yml</span>
-<span class="nn">---</span>
-<span class="pi">-</span> <span class="na">hosts</span><span class="pi">:</span> <span class="s">webservers</span>
-  <span class="na">tasks</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">安装Nginx</span>
-      <span class="na">apt</span><span class="pi">:</span>
-        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
-        <span class="na">state</span><span class="pi">:</span> <span class="s">present</span>
-    
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">启动Nginx服务</span>
-      <span class="na">service</span><span class="pi">:</span>
-        <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
-        <span class="na">state</span><span class="pi">:</span> <span class="s">started</span>
-        <span class="na">enabled</span><span class="pi">:</span> <span class="s">yes</span>
-</code></pre></div></div>
-
-<h2 id="saltstack自动化">SaltStack自动化</h2>
-
-<h3 id="1-状态文件">1. 状态文件</h3>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># /srv/salt/webserver/init.sls</span>
-<span class="na">nginx</span><span class="pi">:</span>
-  <span class="na">pkg.installed</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
-  
-  <span class="na">service.running</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">nginx</span>
-    <span class="pi">-</span> <span class="na">enable</span><span class="pi">:</span> <span class="s">True</span>
-</code></pre></div></div>
-
-<h3 id="2-执行命令">2. 执行命令</h3>
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 应用状态</span>
-salt <span class="s1">'*'</span> state.apply webserver
-
-<span class="c"># 执行远程命令</span>
-salt <span class="s1">'*'</span> cmd.run <span class="s1">'systemctl status nginx'</span>
-</code></pre></div></div>
-
-<h2 id="监控系统">监控系统</h2>
-
-<h3 id="1-使用prometheus">1. 使用Prometheus</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">prometheus_client</span> <span class="kn">import</span> <span class="n">start_http_server</span><span class="p">,</span> <span class="n">Gauge</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c1"># 创建指标
-</span><span class="n">cpu_usage</span> <span class="o">=</span> <span class="n">Gauge</span><span class="p">(</span><span class="s">'cpu_usage'</span><span class="p">,</span> <span class="s">'CPU使用率'</span><span class="p">)</span>
-<span class="n">memory_usage</span> <span class="o">=</span> <span class="n">Gauge</span><span class="p">(</span><span class="s">'memory_usage'</span><span class="p">,</span> <span class="s">'内存使用率'</span><span class="p">)</span>
-
-<span class="c1"># 启动HTTP服务器
-</span><span class="n">start_http_server</span><span class="p">(</span><span class="mi">8000</span><span class="p">)</span>
-
-<span class="c1"># 更新指标
-</span><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
-    <span class="n">cpu_usage</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">get_cpu_usage</span><span class="p">())</span>
-    <span class="n">memory_usage</span><span class="p">.</span><span class="nb">set</span><span class="p">(</span><span class="n">get_memory_usage</span><span class="p">())</span>
-    <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="2-告警配置">2. 告警配置</h3>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># alertmanager.yml</span>
-<span class="na">groups</span><span class="pi">:</span>
-<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">example</span>
-  <span class="na">rules</span><span class="pi">:</span>
-  <span class="pi">-</span> <span class="na">alert</span><span class="pi">:</span> <span class="s">HighCPUUsage</span>
-    <span class="na">expr</span><span class="pi">:</span> <span class="s">cpu_usage &gt; </span><span class="m">80</span>
-    <span class="na">for</span><span class="pi">:</span> <span class="s">5m</span>
-    <span class="na">labels</span><span class="pi">:</span>
-      <span class="na">severity</span><span class="pi">:</span> <span class="s">warning</span>
-    <span class="na">annotations</span><span class="pi">:</span>
-      <span class="na">summary</span><span class="pi">:</span> <span class="s2">"</span><span class="s">高CPU使用率"</span>
-      <span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">服务器</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">$labels.instance</span><span class="nv"> </span><span class="s">}}</span><span class="nv"> </span><span class="s">CPU使用率超过80%"</span>
-</code></pre></div></div>
-
-<h2 id="自动化脚本">自动化脚本</h2>
-
-<h3 id="1-日志分析">1. 日志分析</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
-
-<span class="k">def</span> <span class="nf">analyze_logs</span><span class="p">(</span><span class="n">log_file</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-        <span class="n">logs</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span>
-    
-    <span class="c1"># 统计错误类型
-</span>    <span class="n">errors</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">log</span> <span class="ow">in</span> <span class="n">logs</span><span class="p">:</span>
-        <span class="k">if</span> <span class="s">'ERROR'</span> <span class="ow">in</span> <span class="n">log</span><span class="p">:</span>
-            <span class="n">error_type</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s">'ERROR: (.*)'</span><span class="p">,</span> <span class="n">log</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">error_type</span><span class="p">:</span>
-                <span class="n">errors</span><span class="p">[</span><span class="n">error_type</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span> <span class="o">+=</span> <span class="mi">1</span>
-    
-    <span class="k">return</span> <span class="n">errors</span>
-</code></pre></div></div>
-
-<h3 id="2-系统健康检查">2. 系统健康检查</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_system_health</span><span class="p">():</span>
-    <span class="n">checks</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s">'disk_usage'</span><span class="p">:</span> <span class="n">check_disk_usage</span><span class="p">(),</span>
-        <span class="s">'memory_usage'</span><span class="p">:</span> <span class="n">check_memory_usage</span><span class="p">(),</span>
-        <span class="s">'cpu_usage'</span><span class="p">:</span> <span class="n">check_cpu_usage</span><span class="p">(),</span>
-        <span class="s">'service_status'</span><span class="p">:</span> <span class="n">check_services</span><span class="p">()</span>
-    <span class="p">}</span>
-    
-    <span class="k">return</span> <span class="nb">all</span><span class="p">(</span><span class="n">checks</span><span class="p">.</span><span class="n">values</span><span class="p">()),</span> <span class="n">checks</span>
-</code></pre></div></div>
-
-<h2 id="总结">总结</h2>
-<p>通过本文的学习，你已经了解了如何使用Python结合Ansible和SaltStack来实现自动化运维。这些工具可以帮助你提高运维效率，减少人为错误。</p>
-
-<h2 id="下一步学习建议">下一步学习建议</h2>
-<ol>
-  <li>深入学习Ansible的高级特性</li>
-  <li>学习SaltStack的配置管理</li>
-  <li>了解容器化运维</li>
-  <li>掌握监控系统搭建</li>
-  <li>学习自动化测试在运维中的应用</li>
-</ol>
-
-    </li>
-  
-    <li>
-      <h2><a href="/2024/03/20/python-office-automation/">Python 自动化办公实战：提高工作效率的利器</a></h2>
-      <h1 id="python-自动化办公实战提高工作效率的利器">Python 自动化办公实战：提高工作效率的利器</h1>
-
-<h2 id="引言">引言</h2>
-
-<p>在当今快节奏的工作环境中，提高办公效率变得越来越重要。Python作为一种简单易学且功能强大的编程语言，在办公自动化领域发挥着越来越重要的作用。本文将介绍几个实用的Python自动化办公案例，帮助读者掌握如何利用Python提高工作效率。无论你是数据分析师、行政人员还是普通办公人员，这些案例都能帮助你节省大量重复性工作的时间。</p>
-
-<h2 id="实战案例">实战案例</h2>
-
-<h3 id="1-excel数据处理自动化">1. Excel数据处理自动化</h3>
-
-<h4 id="应用场景">应用场景</h4>
-<p>在日常工作中，我们经常需要处理大量的Excel数据，如数据清洗、格式转换、数据统计等。使用Python可以轻松实现这些任务的自动化。</p>
-
-<h4 id="代码实现">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">openpyxl</span>
-<span class="kn">from</span> <span class="nn">openpyxl.styles</span> <span class="kn">import</span> <span class="n">PatternFill</span><span class="p">,</span> <span class="n">Font</span>
-
-<span class="k">def</span> <span class="nf">process_excel_data</span><span class="p">(</span><span class="n">input_file</span><span class="p">,</span> <span class="n">output_file</span><span class="p">):</span>
-    <span class="c1"># 读取Excel文件
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">input_file</span><span class="p">)</span>
-    
-    <span class="c1"># 数据清洗
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>  <span class="c1"># 删除空值
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>  <span class="c1"># 删除重复值
-</span>    
-    <span class="c1"># 数据统计
-</span>    <span class="n">summary</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">describe</span><span class="p">()</span>
-    
-    <span class="c1"># 保存处理后的数据
-</span>    <span class="k">with</span> <span class="n">pd</span><span class="p">.</span><span class="n">ExcelWriter</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">writer</span><span class="p">:</span>
-        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'处理后的数据'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-        <span class="n">summary</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">writer</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="s">'数据统计'</span><span class="p">)</span>
-    
-    <span class="c1"># 美化Excel
-</span>    <span class="n">wb</span> <span class="o">=</span> <span class="n">openpyxl</span><span class="p">.</span><span class="n">load_workbook</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
-    <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="p">[</span><span class="s">'处理后的数据'</span><span class="p">]</span>
-    
-    <span class="c1"># 设置表头样式
-</span>    <span class="n">header_fill</span> <span class="o">=</span> <span class="n">PatternFill</span><span class="p">(</span><span class="n">start_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">end_color</span><span class="o">=</span><span class="s">'366092'</span><span class="p">,</span> <span class="n">fill_type</span><span class="o">=</span><span class="s">'solid'</span><span class="p">)</span>
-    <span class="n">header_font</span> <span class="o">=</span> <span class="n">Font</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s">'FFFFFF'</span><span class="p">,</span> <span class="n">bold</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">cell</span> <span class="ow">in</span> <span class="n">ws</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">cell</span><span class="p">.</span><span class="n">fill</span> <span class="o">=</span> <span class="n">header_fill</span>
-        <span class="n">cell</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="n">header_font</span>
-    
-    <span class="n">wb</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="n">output_file</span><span class="p">)</span>
-
-<span class="c1"># 使用示例
-</span><span class="n">process_excel_data</span><span class="p">(</span><span class="s">'原始数据.xlsx'</span><span class="p">,</span> <span class="s">'处理后的数据.xlsx'</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="2-自动发送邮件">2. 自动发送邮件</h3>
-
-<h4 id="应用场景-1">应用场景</h4>
-<p>定期发送报告、通知或批量发送个性化邮件是很多工作场景中的常见需求。使用Python可以轻松实现邮件的自动发送。</p>
-
-<h4 id="代码实现-1">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">smtplib</span>
-<span class="kn">from</span> <span class="nn">email.mime.text</span> <span class="kn">import</span> <span class="n">MIMEText</span>
-<span class="kn">from</span> <span class="nn">email.mime.multipart</span> <span class="kn">import</span> <span class="n">MIMEMultipart</span>
-<span class="kn">from</span> <span class="nn">email.mime.application</span> <span class="kn">import</span> <span class="n">MIMEApplication</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-
-<span class="k">def</span> <span class="nf">send_automated_email</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipient_email</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">attachment_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
-    <span class="c1"># 创建邮件对象
-</span>    <span class="n">msg</span> <span class="o">=</span> <span class="n">MIMEMultipart</span><span class="p">()</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'From'</span><span class="p">]</span> <span class="o">=</span> <span class="n">sender_email</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'To'</span><span class="p">]</span> <span class="o">=</span> <span class="n">recipient_email</span>
-    <span class="n">msg</span><span class="p">[</span><span class="s">'Subject'</span><span class="p">]</span> <span class="o">=</span> <span class="n">subject</span>
-    
-    <span class="c1"># 添加邮件正文
-</span>    <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">MIMEText</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="s">'html'</span><span class="p">))</span>
-    
-    <span class="c1"># 添加附件
-</span>    <span class="k">if</span> <span class="n">attachment_path</span><span class="p">:</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">attachment_path</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-            <span class="n">attachment</span> <span class="o">=</span> <span class="n">MIMEApplication</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">())</span>
-            <span class="n">attachment</span><span class="p">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Disposition'</span><span class="p">,</span> <span class="s">'attachment'</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="n">attachment_path</span><span class="p">)</span>
-            <span class="n">msg</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">attachment</span><span class="p">)</span>
-    
-    <span class="c1"># 发送邮件
-</span>    <span class="k">try</span><span class="p">:</span>
-        <span class="n">server</span> <span class="o">=</span> <span class="n">smtplib</span><span class="p">.</span><span class="n">SMTP</span><span class="p">(</span><span class="s">'smtp.gmail.com'</span><span class="p">,</span> <span class="mi">587</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">starttls</span><span class="p">()</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">login</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">send_message</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-        <span class="n">server</span><span class="p">.</span><span class="n">quit</span><span class="p">()</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"邮件已成功发送至 </span><span class="si">{</span><span class="n">recipient_email</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-    <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"发送邮件时出错: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-
-<span class="c1"># 批量发送个性化邮件示例
-</span><span class="k">def</span> <span class="nf">send_bulk_emails</span><span class="p">(</span><span class="n">sender_email</span><span class="p">,</span> <span class="n">sender_password</span><span class="p">,</span> <span class="n">recipients_file</span><span class="p">):</span>
-    <span class="c1"># 读取收件人信息
-</span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">recipients_file</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="p">.</span><span class="n">iterrows</span><span class="p">():</span>
-        <span class="n">recipient_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'email'</span><span class="p">]</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s">'name'</span><span class="p">]</span>
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2024/03/21/python-data-analysis/">Python Data Analysis: Data Processing with Pandas and NumPy</a>
+        </h2>
         
-        <span class="c1"># 个性化邮件内容
-</span>        <span class="n">subject</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"您好，</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">！这是您的周报"</span>
-        <span class="n">body</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"""
-        &lt;html&gt;
-            &lt;body&gt;
-                &lt;h2&gt;尊敬的 </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">：&lt;/h2&gt;
-                &lt;p&gt;附件是您的周报，请查收。&lt;/p&gt;
-                &lt;p&gt;如有任何问题，请随时联系我。&lt;/p&gt;
-                &lt;br&gt;
-                &lt;p&gt;祝好！&lt;/p&gt;
-            &lt;/body&gt;
-        &lt;/html&gt;
-        """</span>
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            March 21, 2024
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              DoubleChen11
+            </span>
+          
+          
+          
+            <div class="post-categories">
+              
+                <a href="/categories/#python-data-analysis" class="category-link">
+                  <i class="fas fa-folder"></i>
+                  Python Data Analysis
+                </a>
+              
+            </div>
+          
+          
+          
+            <div class="post-tags">
+              
+                <a href="/tags/#python" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Python
+                </a>
+              
+                <a href="/tags/#data-analysis" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Data Analysis
+                </a>
+              
+            </div>
+          
+        </div>
+
         
-        <span class="n">send_automated_email</span><span class="p">(</span>
-            <span class="n">sender_email</span><span class="p">,</span>
-            <span class="n">sender_password</span><span class="p">,</span>
-            <span class="n">recipient_email</span><span class="p">,</span>
-            <span class="n">subject</span><span class="p">,</span>
-            <span class="n">body</span><span class="p">,</span>
-            <span class="sa">f</span><span class="s">"reports/</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">_report.pdf"</span>
-        <span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="3-文件批量处理">3. 文件批量处理</h3>
-
-<h4 id="应用场景-2">应用场景</h4>
-<p>在日常工作中，我们经常需要对大量文件进行重命名、格式转换等操作。使用Python可以轻松实现这些任务的自动化。</p>
-
-<h4 id="代码实现-2">代码实现</h4>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-
-<span class="k">def</span> <span class="nf">batch_process_files</span><span class="p">(</span><span class="n">input_dir</span><span class="p">,</span> <span class="n">output_dir</span><span class="p">,</span> <span class="n">file_type</span><span class="o">=</span><span class="s">'.xlsx'</span><span class="p">):</span>
-    <span class="c1"># 创建输出目录
-</span>    <span class="n">os</span><span class="p">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+          <div class="post-excerpt">
+            Python Data Analysis: Data Processing with Pandas and NumPy Introduction In the field of data science, Python is one of the most popular programming languages. This article will introduce how to use Pandas and NumPy, two powerful libraries, for data analysis. Data Processing Basics 1. NumPy Array Operations import numpy...
+          </div>
+        
+        
+        <a href="/2024/03/21/python-data-analysis/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
     
-    <span class="c1"># 获取所有指定类型的文件
-</span>    <span class="n">files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">input_dir</span><span class="p">).</span><span class="n">glob</span><span class="p">(</span><span class="sa">f</span><span class="s">'*</span><span class="si">{</span><span class="n">file_type</span><span class="si">}</span><span class="s">'</span><span class="p">))</span>
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2024/03/21/python-basics/">Python Basics: From Beginner to Pro</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            March 21, 2024
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              DoubleChen11
+            </span>
+          
+          
+          
+            <div class="post-categories">
+              
+                <a href="/categories/#python" class="category-link">
+                  <i class="fas fa-folder"></i>
+                  Python
+                </a>
+              
+            </div>
+          
+          
+          
+            <div class="post-tags">
+              
+                <a href="/tags/#python" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Python
+                </a>
+              
+                <a href="/tags/#programming-basics" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Programming Basics
+                </a>
+              
+            </div>
+          
+        </div>
+
+        
+          <div class="post-excerpt">
+            Python Basics: From Beginner to Pro Introduction Python, as a simple yet powerful programming language, has become one of the most popular programming languages. This article will guide you through learning Python from scratch and mastering its fundamentals. Python Basic Syntax 1. Variables and Data Types Basic data types in...
+          </div>
+        
+        
+        <a href="/2024/03/21/python-basics/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
     
-    <span class="c1"># 处理每个文件
-</span>    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="c1"># 读取文件
-</span>        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_excel</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2024/03/21/automated-testing/">Python Automated Testing: A Practical Guide</a>
+        </h2>
         
-        <span class="c1"># 数据处理（示例：添加处理日期列）
-</span>        <span class="n">df</span><span class="p">[</span><span class="s">'处理日期'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Timestamp</span><span class="p">.</span><span class="n">now</span><span class="p">().</span><span class="n">strftime</span><span class="p">(</span><span class="s">'%Y-%m-%d'</span><span class="p">)</span>
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            March 21, 2024
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              DoubleChen11
+            </span>
+          
+          
+          
+            <div class="post-categories">
+              
+                <a href="/categories/#automated-testing" class="category-link">
+                  <i class="fas fa-folder"></i>
+                  Automated Testing
+                </a>
+              
+            </div>
+          
+          
+          
+            <div class="post-tags">
+              
+                <a href="/tags/#python" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Python
+                </a>
+              
+                <a href="/tags/#automated-testing" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Automated Testing
+                </a>
+              
+                <a href="/tags/#testing-framework" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Testing Framework
+                </a>
+              
+            </div>
+          
+        </div>
+
         
-        <span class="c1"># 保存处理后的文件
-</span>        <span class="n">output_file</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="sa">f</span><span class="s">'processed_</span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
-        <span class="n">df</span><span class="p">.</span><span class="n">to_excel</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+          <div class="post-excerpt">
+            Python Automated Testing: A Practical Guide Introduction In software development, automated testing is a crucial means of ensuring software quality. This article will introduce how to use Python for automated testing, including unit testing, integration testing, and end-to-end testing. Automated Testing Frameworks 1. unittest Framework Python’s built-in unittest framework is...
+          </div>
         
-        <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"已处理文件: </span><span class="si">{</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        
+        <a href="/2024/03/21/automated-testing/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2024/03/21/automated-ops/">Python Automated Operations: Using Ansible and SaltStack</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            March 21, 2024
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              DoubleChen11
+            </span>
+          
+          
+          
+            <div class="post-categories">
+              
+                <a href="/categories/#automated-operations" class="category-link">
+                  <i class="fas fa-folder"></i>
+                  Automated Operations
+                </a>
+              
+            </div>
+          
+          
+          
+            <div class="post-tags">
+              
+                <a href="/tags/#ops-automation" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Ops Automation
+                </a>
+              
+                <a href="/tags/#python" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Python
+                </a>
+              
+            </div>
+          
+        </div>
 
-<span class="c1"># 使用示例
-</span><span class="n">batch_process_files</span><span class="p">(</span><span class="s">'原始文件'</span><span class="p">,</span> <span class="s">'处理后的文件'</span><span class="p">)</span>
-</code></pre></div></div>
+        
+          <div class="post-excerpt">
+            Python Automated Operations: Using Ansible and SaltStack Introduction In modern IT operations, automation has become the key to improving efficiency. This article introduces how to use Python together with Ansible and SaltStack to achieve automated operations. Ansible Automation 1. Basic Configuration # inventory.yml [webservers] web1 ansible_host=192.168.1.10 web2 ansible_host=192.168.1.11 [databases] db1...
+          </div>
+        
+        
+        <a href="/2024/03/21/automated-ops/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2024/03/20/python-office-automation/">Python Office Automation in Practice: A Powerful Tool for Improving Work Efficiency</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            March 20, 2024
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              DoubleChen11
+            </span>
+          
+          
+          
+            <div class="post-categories">
+              
+                <a href="/categories/#python-office-automation" class="category-link">
+                  <i class="fas fa-folder"></i>
+                  Python Office Automation
+                </a>
+              
+            </div>
+          
+          
+          
+            <div class="post-tags">
+              
+                <a href="/tags/#python" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Python
+                </a>
+              
+                <a href="/tags/#office-automation" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Office Automation
+                </a>
+              
+                <a href="/tags/#excel" class="tag-link">
+                  <i class="fas fa-tag"></i>
+                  Excel
+                </a>
+              
+            </div>
+          
+        </div>
 
-<h2 id="效率提升对比">效率提升对比</h2>
+        
+          <div class="post-excerpt">
+            Python Office Automation in Practice: A Powerful Tool for Improving Work Efficiency Introduction In today’s fast-paced work environment, improving office efficiency has become increasingly important. Python, as a simple yet powerful programming language, plays an increasingly vital role in office automation. This article introduces several practical Python office automation cases...
+          </div>
+        
+        
+        <a href="/2024/03/20/python-office-automation/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2018/08/22/kiwifruit/">Automating Office Reports</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            August 22, 2018
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              Emily
+            </span>
+          
+          
+          
+          
+          
+        </div>
 
-<p>以下是使用Python自动化处理与手动处理的时间对比：</p>
+        
+          <div class="post-excerpt">
+            Automating Office Reports with Python
 
-<table>
-  <thead>
-    <tr>
-      <th>任务类型</th>
-      <th>手动处理时间</th>
-      <th>自动化处理时间</th>
-      <th>效率提升</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Excel数据处理</td>
-      <td>2小时</td>
-      <td>5分钟</td>
-      <td>96%</td>
-    </tr>
-    <tr>
-      <td>邮件发送</td>
-      <td>1小时</td>
-      <td>2分钟</td>
-      <td>97%</td>
-    </tr>
-    <tr>
-      <td>文件批量处理</td>
-      <td>3小时</td>
-      <td>10分钟</td>
-      <td>94%</td>
-    </tr>
-  </tbody>
-</table>
 
-<h2 id="总结">总结</h2>
+          </div>
+        
+        
+        <a href="/2018/08/22/kiwifruit/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2018/08/21/apples/">Batch Email Sending</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            August 21, 2018
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              David
+            </span>
+          
+          
+          
+          
+          
+        </div>
 
-<p>通过以上案例，我们可以看到Python在办公自动化中的强大作用。它不仅能够帮助我们节省大量重复性工作的时间，还能提高工作的准确性和一致性。建议读者根据自身工作需求，选择合适的自动化方案，逐步提高工作效率。</p>
+        
+          <div class="post-excerpt">
+            Batch Email Sending with Python
 
-<h2 id="参考资料">参考资料</h2>
 
-<ol>
-  <li><a href="https://docs.python.org/3/">Python官方文档</a></li>
-  <li><a href="https://pandas.pydata.org/docs/">pandas文档</a></li>
-  <li><a href="https://openpyxl.readthedocs.io/">openpyxl文档</a></li>
-  <li><a href="https://www.example.com/python-office-automation">Python自动化办公实战</a></li>
-</ol>
+          </div>
+        
+        
+        <a href="/2018/08/21/apples/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+      <article class="post-item">
+        <h2 class="post-title">
+          <a href="/2018/08/20/bananas/">Automating File Organization</a>
+        </h2>
+        
+        <div class="post-meta">
+          <span class="post-date">
+            <i class="far fa-calendar"></i>
+            August 20, 2018
+          </span>
+          
+            <span class="post-author">
+              <i class="far fa-user"></i>
+              Sophia
+            </span>
+          
+          
+          
+          
+          
+        </div>
 
-<h2 id="评论与讨论">评论与讨论</h2>
+        
+          <div class="post-excerpt">
+            Automating File Organization with Python
 
-<p>欢迎在下方评论区分享你的自动化办公经验，或者提出任何问题。我们可以一起探讨如何更好地利用Python提高工作效率。</p>
 
-    </li>
+          </div>
+        
+        
+        <a href="/2018/08/20/bananas/" class="read-more">
+          Read More
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </article>
+    
+  </div>
+</div>
+
+<style>
+.blog-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.post-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.post-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.post-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.post-title a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.post-title a:hover {
+  color: #3498db;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.post-date, .post-author {
+  display: flex;
+  align-items: center;
+}
+
+.post-meta i {
+  margin-right: 0.4rem;
+  color: #3498db;
+}
+
+.post-categories, .post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.category-link, .tag-link {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.category-link:hover, .tag-link:hover {
+  background-color: #e9ecef;
+  color: #3498db;
+}
+
+.category-link i, .tag-link i {
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.post-excerpt {
+  color: #6c757d;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  display: inline-flex;
+  align-items: center;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: #2980b9;
+}
+
+.read-more i {
+  margin-left: 0.5rem;
+  transition: transform 0.3s;
+}
+
+.read-more:hover i {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .blog-page {
+    padding: 1rem;
+  }
   
-    <li>
-      <h2><a href="/2018/08/22/kiwifruit/">Automating Office Reports</a></h2>
-      <p>Automating Office Reports with Python</p>
-
-
-    </li>
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
   
-    <li>
-      <h2><a href="/2018/08/21/apples/">Batch Email Sending</a></h2>
-      <p>Batch Email Sending with Python</p>
-
-
-    </li>
+  .post-item {
+    padding: 1.5rem;
+  }
   
-    <li>
-      <h2><a href="/2018/08/20/bananas/">Automating File Organization</a></h2>
-      <p>Automating File Organization with Python</p>
-
-
-    </li>
+  .post-title {
+    font-size: 1.5rem;
+  }
   
-</ul>
+  .post-excerpt {
+    font-size: 1rem;
+  }
+}
+</style>
       </div>
     </main>
 

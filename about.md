@@ -2,160 +2,160 @@
 layout: default
 title: About
 ---
-# Python在自动化办公中的数学公式与统计模型示例
+# Mathematical Formulas and Statistical Models in Python for Office Automation
 
-### 1. 线性回归模型
+### 1. Linear Regression Model
 
-线性回归是分析两个及以上变量间线性关系的统计方法。其表达式为：
+Linear regression is a statistical method for analyzing the linear relationship between two or more variables. Its expression is:
 
 $$y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_nx_n + \epsilon$$
 
-下面是使用Python实现简单线性回归的代码：
+Here's the Python implementation of simple linear regression:
 
 ```python
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-# 示例数据
+# Sample data
 X = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
 y = np.array([2, 4, 6, 8, 10])
 
-# 创建并拟合模型
+# Create and fit the model
 model = LinearRegression()
 model.fit(X, y)
 
-# 输出系数
-print(f"斜率: {model.coef_[0]}")
-print(f"截距: {model.intercept_}")
+# Output coefficients
+print(f"Slope: {model.coef_[0]}")
+print(f"Intercept: {model.intercept_}")
 ```
 
-### 2. 时间序列预测（移动平均法）
+### 2. Time Series Forecasting (Moving Average)
 
-移动平均法可用于平滑时间序列数据，其公式为：
+Moving average can be used to smooth time series data. The formula is:
 
 $$MA_t = \frac{y_{t-1} + y_{t-2} + \dots + y_{t-n}}{n}$$
 
-下面是Python实现移动平均的代码：
+Here's the Python implementation of moving average:
 
 ```python
 def moving_average(data, window_size):
     """
-    计算移动平均值
+    Calculate moving average
     
-    参数:
-    data (list): 时间序列数据
-    window_size (int): 窗口大小
+    Parameters:
+    data (list): Time series data
+    window_size (int): Window size
     
-    返回:
-    list: 移动平均结果
+    Returns:
+    list: Moving average results
     """
     return [sum(data[i:i+window_size])/window_size for i in range(len(data)-window_size+1)]
 
-# 示例数据
+# Sample data
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 window_size = 3
 
-# 计算移动平均
+# Calculate moving average
 ma_result = moving_average(data, window_size)
-print(f"移动平均结果: {ma_result}")
+print(f"Moving average results: {ma_result}")
 ```
 
-### 3. 数据预处理：Min-Max缩放
+### 3. Data Preprocessing: Min-Max Scaling
 
-Min-Max缩放能把数据缩放到[0, 1]区间，公式如下：
+Min-Max scaling can normalize data to the range [0, 1]. The formula is:
 
 $$X_{norm} = \frac{X - X_{min}}{X_{max} - X_{min}}$$
 
-下面是Python实现Min-Max缩放的代码：
+Here's the Python implementation of Min-Max scaling:
 
 ```python
 def min_max_scaling(data):
     """
-    实现Min-Max缩放
+    Implement Min-Max scaling
     
-    参数:
-    data (list): 输入数据
+    Parameters:
+    data (list): Input data
     
-    返回:
-    list: 缩放后的数据
+    Returns:
+    list: Scaled data
     """
     min_val = min(data)
     max_val = max(data)
     return [(x - min_val) / (max_val - min_val) for x in data]
 
-# 示例数据
+# Sample data
 data = [10, 20, 30, 40, 50]
 
-# 进行缩放
+# Perform scaling
 scaled_data = min_max_scaling(data)
-print(f"缩放后的数据: {scaled_data}")
+print(f"Scaled data: {scaled_data}")
 ```
 
-### 4. 决策树核心：信息熵计算
+### 4. Decision Tree Core: Information Entropy Calculation
 
-信息熵用于衡量数据的不确定性，公式为：
+Information entropy is used to measure data uncertainty. The formula is:
 
 $$H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)$$
 
-下面是Python计算信息熵的代码：
+Here's the Python code for calculating information entropy:
 
 ```python
 import numpy as np
 
 def entropy(labels):
     """
-    计算信息熵
+    Calculate information entropy
     
-    参数:
-    labels (list): 标签列表
+    Parameters:
+    labels (list): List of labels
     
-    返回:
-    float: 信息熵值
+    Returns:
+    float: Information entropy value
     """
     _, counts = np.unique(labels, return_counts=True)
     probabilities = counts / len(labels)
     return -np.sum(probabilities * np.log2(probabilities))
 
-# 示例数据
-labels = ['是', '是', '否', '否', '否']
+# Sample data
+labels = ['Yes', 'Yes', 'No', 'No', 'No']
 
-# 计算信息熵
+# Calculate entropy
 entropy_value = entropy(labels)
-print(f"信息熵: {entropy_value}")
+print(f"Entropy: {entropy_value}")
 ```
 
-### 5. 投资评估：净现值(NPV)计算
+### 5. Investment Evaluation: Net Present Value (NPV) Calculation
 
-净现值（NPV）可评估投资的盈利能力，公式为：
+Net Present Value (NPV) can evaluate investment profitability. The formula is:
 
 $$NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+r)^t}$$
 
-下面是Python计算净现值的代码：
+Here's the Python code for calculating NPV:
 
 ```python
 def npv(rate, cashflows):
     """
-    计算净现值
+    Calculate Net Present Value
     
-    参数:
-    rate (float): 折现率
-    cashflows (list): 现金流列表，第一个值通常为初始投资（负数）
+    Parameters:
+    rate (float): Discount rate
+    cashflows (list): List of cash flows, first value is usually initial investment (negative)
     
-    返回:
-    float: 净现值
+    Returns:
+    float: Net Present Value
     """
     total = 0.0
     for i, cashflow in enumerate(cashflows):
         total += cashflow / (1 + rate) ** i
     return total
 
-# 示例数据
-rate = 0.1  # 10% 折现率
-cashflows = [-1000, 300, 300, 300, 300]  # 初始投资1000，后续4年每年收入300
+# Sample data
+rate = 0.1  # 10% discount rate
+cashflows = [-1000, 300, 300, 300, 300]  # Initial investment 1000, 300 income for next 4 years
 
-# 计算净现值
+# Calculate NPV
 npv_value = npv(rate, cashflows)
-print(f"净现值: {npv_value}")
+print(f"Net Present Value: {npv_value}")
 ```
 <br>
-<p>以上内容展示了Python在数据分析、预测建模和财务分析中的典型应用场景。</p>
+<p>The above content demonstrates typical applications of Python in data analysis, predictive modeling, and financial analysis.</p>

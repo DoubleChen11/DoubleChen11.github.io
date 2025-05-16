@@ -1,49 +1,49 @@
 - name: Home
   link: /
   icon: home
-  description: 返回首页
+  description: Back to homepage
   order: 1
   group: main
 
 - name: About
   link: /about.html
   icon: user
-  description: 关于我
+  description: About me
   order: 2
   group: main
 
 - name: Blog
   link: /blog.html
   icon: blog
-  description: 博客文章
+  description: Blog posts
   order: 3
   group: main
 
 - name: Categories
   link: /categories.html
   icon: folder
-  description: 文章分类
+  description: Article categories
   order: 4
   group: main
 
 - name: Tags
   link: /tags.html
   icon: tags
-  description: 文章标签
+  description: Article tags
   order: 5
   group: main
 
 - name: Staff
   link: /staff.html
   icon: users
-  description: 团队成员
+  description: Team members
   order: 6
   group: main
 
 - name: GitHub
   link: https://github.com/yourusername
   icon: github
-  description: 我的GitHub
+  description: My GitHub
   order: 7
   group: social
   external: true
@@ -51,7 +51,7 @@
 - name: Twitter
   link: https://twitter.com/yourusername
   icon: twitter
-  description: 我的Twitter
+  description: My Twitter
   order: 8
   group: social
   external: true
@@ -59,7 +59,7 @@
 - name: LinkedIn
   link: https://linkedin.com/in/yourusername
   icon: linkedin
-  description: 我的LinkedIn
+  description: My LinkedIn
   order: 9
   group: social
   external: true

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python数据分析：使用Pandas和NumPy进行数据处理 - DoubleChen11's Blog</title>
+    <title>Python Data Analysis: Data Processing with Pandas and NumPy - DoubleChen11's Blog</title>
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/background.css">
     <!DOCTYPE html>
@@ -11,8 +11,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python数据分析：使用Pandas和NumPy进行数据处理 - DoubleChen11's Blog</title>
-    <meta name="description" content="分享技术、生活和思考的个人博客">
+    <title>Python Data Analysis: Data Processing with Pandas and NumPy - DoubleChen11's Blog</title>
+    <meta name="description" content="A personal blog sharing technology, life, and thoughts">
     
     <!-- MathJax Support -->
     <script type="text/javascript" async
@@ -42,22 +42,22 @@
     
     
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Python数据分析：使用Pandas和NumPy进行数据处理 | DoubleChen11’s Blog</title>
+<title>Python Data Analysis: Data Processing with Pandas and NumPy | DoubleChen11’s Blog</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Python数据分析：使用Pandas和NumPy进行数据处理" />
+<meta property="og:title" content="Python Data Analysis: Data Processing with Pandas and NumPy" />
 <meta name="author" content="DoubleChen11" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="分享技术、生活和思考的个人博客" />
-<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<meta name="description" content="A personal blog sharing technology, life, and thoughts" />
+<meta property="og:description" content="A personal blog sharing technology, life, and thoughts" />
 <link rel="canonical" href="https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/" />
 <meta property="og:url" content="https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-03-21T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Python数据分析：使用Pandas和NumPy进行数据处理" />
+<meta property="twitter:title" content="Python Data Analysis: Data Processing with Pandas and NumPy" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoubleChen11"},"dateModified":"2024-03-21T00:00:00+08:00","datePublished":"2024-03-21T00:00:00+08:00","description":"分享技术、生活和思考的个人博客","headline":"Python数据分析：使用Pandas和NumPy进行数据处理","mainEntityOfPage":{"@type":"WebPage","@id":"https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/"},"url":"https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"DoubleChen11"},"dateModified":"2024-03-21T00:00:00+08:00","datePublished":"2024-03-21T00:00:00+08:00","description":"A personal blog sharing technology, life, and thoughts","headline":"Python Data Analysis: Data Processing with Pandas and NumPy","mainEntityOfPage":{"@type":"WebPage","@id":"https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/"},"url":"https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -99,7 +99,7 @@
       <div class="container">
         <article class="post">
   <header class="post-header">
-    <h1 class="post-title">Python数据分析：使用Pandas和NumPy进行数据处理</h1>
+    <h1 class="post-title">Python Data Analysis: Data Processing with Pandas and NumPy</h1>
     <div class="post-meta">
       <time datetime="2024-03-21T00:00:00+08:00">
         <i class="far fa-calendar"></i>
@@ -115,7 +115,7 @@
         <span class="post-categories">
           <i class="far fa-folder"></i>
           
-            <a href="/categories#python数据分析">Python数据分析</a>
+            <a href="/categories#python-data-analysis">Python Data Analysis</a>
             
           
         </span>
@@ -127,7 +127,7 @@
             <a href="/tags#python">Python</a>
             , 
           
-            <a href="/tags#数据分析">数据分析</a>
+            <a href="/tags#data-analysis">Data Analysis</a>
             
           
         </span>
@@ -136,88 +136,88 @@
   </header>
 
   <div class="post-content">
-    <h1 id="python数据分析使用pandas和numpy进行数据处理">Python数据分析：使用Pandas和NumPy进行数据处理</h1>
+    <h1 id="python-data-analysis-data-processing-with-pandas-and-numpy">Python Data Analysis: Data Processing with Pandas and NumPy</h1>
 
-<h2 id="引言">引言</h2>
-<p>在数据科学领域，Python是最受欢迎的编程语言之一。本文将介绍如何使用Pandas和NumPy这两个强大的库来进行数据分析。</p>
+<h2 id="introduction">Introduction</h2>
+<p>In the field of data science, Python is one of the most popular programming languages. This article will introduce how to use Pandas and NumPy, two powerful libraries, for data analysis.</p>
 
-<h2 id="数据处理基础">数据处理基础</h2>
+<h2 id="data-processing-basics">Data Processing Basics</h2>
 
-<h3 id="1-numpy数组操作">1. NumPy数组操作</h3>
+<h3 id="1-numpy-array-operations">1. NumPy Array Operations</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
-<span class="c1"># 创建数组
+<span class="c1"># Create array
 </span><span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-<span class="c1"># 数组运算
+<span class="c1"># Array operations
 </span><span class="n">arr_squared</span> <span class="o">=</span> <span class="n">arr</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="c1"># 统计计算
+<span class="c1"># Statistical calculations
 </span><span class="n">mean</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="2-pandas数据处理">2. Pandas数据处理</h3>
+<h3 id="2-pandas-data-processing">2. Pandas Data Processing</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
 
-<span class="c1"># 创建DataFrame
+<span class="c1"># Create DataFrame
 </span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s">'Alice'</span><span class="p">,</span> <span class="s">'Bob'</span><span class="p">,</span> <span class="s">'Charlie'</span><span class="p">],</span>
     <span class="s">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
     <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="mi">50000</span><span class="p">,</span> <span class="mi">60000</span><span class="p">,</span> <span class="mi">70000</span><span class="p">]</span>
 <span class="p">})</span>
 
-<span class="c1"># 数据筛选
+<span class="c1"># Data filtering
 </span><span class="n">high_salary</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">55000</span><span class="p">]</span>
 </code></pre></div></div>
 
-<h2 id="数据可视化">数据可视化</h2>
+<h2 id="data-visualization">Data Visualization</h2>
 
-<h3 id="1-使用matplotlib">1. 使用Matplotlib</h3>
+<h3 id="1-using-matplotlib">1. Using Matplotlib</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 
-<span class="c1"># 创建折线图
+<span class="c1"># Create line plot
 </span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">'age'</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s">'salary'</span><span class="p">],</span> <span class="s">'o-'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'年龄与薪资关系'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'年龄'</span><span class="p">)</span>
-<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'薪资'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Age vs Salary Relationship'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'Age'</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'Salary'</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h3 id="2-使用seaborn">2. 使用Seaborn</h3>
+<h3 id="2-using-seaborn">2. Using Seaborn</h3>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
 
-<span class="c1"># 创建箱线图
+<span class="c1"># Create box plot
 </span><span class="n">sns</span><span class="p">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span>
 <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h2 id="数据分析案例">数据分析案例</h2>
+<h2 id="data-analysis-case-studies">Data Analysis Case Studies</h2>
 
-<h3 id="1-数据清洗">1. 数据清洗</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 处理缺失值
+<h3 id="1-data-cleaning">1. Data Cleaning</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Handle missing values
 </span><span class="n">df_cleaned</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">dropna</span><span class="p">()</span>
-<span class="c1"># 处理重复值
+<span class="c1"># Handle duplicate values
 </span><span class="n">df_unique</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h3 id="2-数据聚合">2. 数据聚合</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 按年龄分组统计
+<h3 id="2-data-aggregation">2. Data Aggregation</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Group by age and calculate statistics
 </span><span class="n">age_stats</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">groupby</span><span class="p">(</span><span class="s">'age'</span><span class="p">).</span><span class="n">agg</span><span class="p">({</span>
     <span class="s">'salary'</span><span class="p">:</span> <span class="p">[</span><span class="s">'mean'</span><span class="p">,</span> <span class="s">'std'</span><span class="p">,</span> <span class="s">'count'</span><span class="p">]</span>
 <span class="p">})</span>
 </code></pre></div></div>
 
-<h2 id="高级分析技术">高级分析技术</h2>
+<h2 id="advanced-analysis-techniques">Advanced Analysis Techniques</h2>
 
-<h3 id="1-时间序列分析">1. 时间序列分析</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建时间序列数据
+<h3 id="1-time-series-analysis">1. Time Series Analysis</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create time series data
 </span><span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">date_range</span><span class="p">(</span><span class="s">'2024-01-01'</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">ts</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
-<span class="c1"># 计算移动平均
+<span class="c1"># Calculate moving average
 </span><span class="n">ma</span> <span class="o">=</span> <span class="n">ts</span><span class="p">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">7</span><span class="p">).</span><span class="n">mean</span><span class="p">()</span>
 </code></pre></div></div>
 
-<h3 id="2-数据透视表">2. 数据透视表</h3>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 创建数据透视表
+<h3 id="2-pivot-tables">2. Pivot Tables</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Create pivot table
 </span><span class="n">pivot</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> 
     <span class="n">values</span><span class="o">=</span><span class="s">'salary'</span><span class="p">,</span>
     <span class="n">index</span><span class="o">=</span><span class="s">'age'</span><span class="p">,</span>
@@ -226,16 +226,16 @@
 <span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="总结">总结</h2>
-<p>通过本文的学习，你已经了解了使用Python进行数据分析的基本方法。Pandas和NumPy这两个库为数据分析提供了强大的工具。</p>
+<h2 id="summary">Summary</h2>
+<p>Through this article, you have learned the basic methods of data analysis using Python. The Pandas and NumPy libraries provide powerful tools for data analysis.</p>
 
-<h2 id="下一步学习建议">下一步学习建议</h2>
+<h2 id="next-steps">Next Steps</h2>
 <ol>
-  <li>深入学习Pandas的高级特性</li>
-  <li>学习数据可视化技术</li>
-  <li>了解机器学习基础</li>
-  <li>掌握数据清洗技巧</li>
-  <li>学习大数据处理技术</li>
+  <li>Deep dive into Pandas advanced features</li>
+  <li>Learn data visualization techniques</li>
+  <li>Understand machine learning basics</li>
+  <li>Master data cleaning techniques</li>
+  <li>Learn big data processing technologies</li>
 </ol>
 
   </div>
@@ -244,13 +244,13 @@
     <div class="post-share">
       <h3>分享文章</h3>
       <div class="share-buttons">
-        <a href="https://twitter.com/intent/tweet?text=Python数据分析：使用Pandas和NumPy进行数据处理&url=https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/" target="_blank" rel="noopener">
+        <a href="https://twitter.com/intent/tweet?text=Python Data Analysis: Data Processing with Pandas and NumPy&url=https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/" target="_blank" rel="noopener">
           <i class="fab fa-twitter"></i> Twitter
         </a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/" target="_blank" rel="noopener">
           <i class="fab fa-facebook"></i> Facebook
         </a>
-        <a href="https://service.weibo.com/share/share.php?url=https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/&title=Python数据分析：使用Pandas和NumPy进行数据处理" target="_blank" rel="noopener">
+        <a href="https://service.weibo.com/share/share.php?url=https://doublechen11.github.io/_posts/2024-03-21-python-data-analysis/&title=Python Data Analysis: Data Processing with Pandas and NumPy" target="_blank" rel="noopener">
           <i class="fab fa-weibo"></i> 微博
         </a>
       </div>

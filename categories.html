@@ -23,7 +23,7 @@ permalink: /categories/
       <h2 class="category-title">
         <i class="fas fa-folder"></i>
         {{ category[0] }}
-        <span class="category-count">({{ category[1] | size }} 篇文章)</span>
+        <span class="category-count">({{ category[1] | size }} posts)</span>
       </h2>
       
       <div class="post-list">
@@ -34,11 +34,15 @@ permalink: /categories/
               <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
             </h3>
             <div class="post-meta">
-              <i class="far fa-calendar"></i>
-              {{ post.date | date: "%B %d, %Y" }}
+              <span class="post-date">
+                <i class="far fa-calendar"></i>
+                {{ post.date | date: "%B %d, %Y" }}
+              </span>
               {% if post.author %}
-                <i class="far fa-user"></i>
-                {{ post.author }}
+                <span class="post-author">
+                  <i class="far fa-user"></i>
+                  {{ post.author }}
+                </span>
               {% endif %}
               <div class="post-tags">
                 {% for tag in post.tags %}
@@ -71,7 +75,9 @@ permalink: /categories/
 .page-title {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .category-list {
@@ -79,119 +85,171 @@ permalink: /categories/
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 3rem;
+  justify-content: center;
 }
 
 .category-item {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-  color: #333;
+  padding: 0.8rem 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  color: #2c3e50;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .category-item:hover {
-  background-color: #e0e0e0;
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .category-item i {
   margin-right: 0.5rem;
+  color: #3498db;
 }
 
 .count {
   margin-left: 0.5rem;
-  background-color: #666;
+  background-color: #3498db;
   color: white;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 12px;
   font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .category-section {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .category-title {
   display: flex;
   align-items: center;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #eee;
-  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #e9ecef;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
 }
 
 .category-title i {
-  margin-right: 0.5rem;
-  color: #666;
+  margin-right: 0.8rem;
+  color: #3498db;
 }
 
 .category-count {
-  margin-left: 0.5rem;
-  font-size: 0.9rem;
-  color: #666;
+  margin-left: 0.8rem;
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: normal;
 }
 
 .post-item {
   margin-bottom: 2rem;
-  padding: 1.5rem;
+  padding: 2rem;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 .post-title {
   margin: 0 0 1rem 0;
+  font-size: 1.5rem;
 }
 
 .post-title a {
-  color: #333;
+  color: #2c3e50;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .post-title a:hover {
-  color: #007bff;
+  color: #3498db;
 }
 
 .post-meta {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  color: #666;
-  font-size: 0.9rem;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+.post-date, .post-author {
+  display: flex;
+  align-items: center;
 }
 
 .post-meta i {
-  margin-right: 0.3rem;
+  margin-right: 0.4rem;
+  color: #3498db;
 }
 
 .post-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .tag-link {
   display: flex;
   align-items: center;
-  padding: 0.2rem 0.5rem;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  color: #666;
+  padding: 0.3rem 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  color: #6c757d;
   text-decoration: none;
-  font-size: 0.8rem;
-  transition: background-color 0.3s;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
 }
 
 .tag-link:hover {
-  background-color: #e0e0e0;
+  background-color: #e9ecef;
+  color: #3498db;
+}
+
+.tag-link i {
+  margin-right: 0.4rem;
+  font-size: 0.8rem;
 }
 
 .post-excerpt {
-  color: #666;
-  line-height: 1.6;
+  color: #6c757d;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .categories-page {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+  
+  .post-item {
+    padding: 1.5rem;
+  }
+  
+  .post-title {
+    font-size: 1.3rem;
+  }
 }
 </style> 

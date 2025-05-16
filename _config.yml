@@ -1,6 +1,6 @@
 # Site settings
 title: DoubleChen11's Blog
-description: 分享技术、生活和思考的个人博客
+description: A personal blog sharing technology, life, and thoughts
 baseurl: ""
 url: "https://doublechen11.github.io"
 
@@ -70,7 +70,7 @@ theme: jekyll-theme-primer
 # Author information
 author:
   name: DoubleChen11
-  bio: 热爱技术，热爱生活
+  bio: Passionate about technology and life
   avatar: /assets/images/avatar.jpg
   location: China
   links:
@@ -81,15 +81,15 @@ author:
 
 # Navigation
 navigation:
-  - title: 首页
+  - title: Home
     url: /
-  - title: 文章
+  - title: Posts
     url: /posts/
-  - title: 分类
+  - title: Categories
     url: /categories/
-  - title: 标签
+  - title: Tags
     url: /tags/
-  - title: 关于
+  - title: About
     url: /about/
 
 # Footer
@@ -98,9 +98,9 @@ footer:
 
 # SEO
 seo:
-  title: DoubleChen11's Blog - 技术、生活和思考
-  description: 分享技术、生活和思考的个人博客
-  keywords: 技术博客, 编程, Python, 自动化, 效率提升
+  title: DoubleChen11's Blog - Technology, Life, and Thoughts
+  description: A personal blog sharing technology, life, and thoughts
+  keywords: tech blog, programming, Python, automation, productivity
   author: DoubleChen11
 
 # Timezone

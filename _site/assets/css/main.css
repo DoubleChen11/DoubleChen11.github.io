@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
 
+
 body {
   font-family: 'Roboto Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
-  background: none;
+  background: url('/assets/images/bc2.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8f8ff;
   margin: 0;
+  line-height: 1.6;
   padding: 0;
-  color: #2e2e3a;
 }
 
 .site-header {
@@ -65,7 +68,10 @@ body {
 
 .site-content {
   margin-top: 2.5rem;
+  color: #000 ;
 }
+
+
 
 /* 科技感分割线 */
 .site-header::after {

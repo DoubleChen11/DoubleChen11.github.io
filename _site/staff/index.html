@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff - DoubleChen11's Blog</title>
-    <meta name="description" content="分享技术、生活和思考的个人博客">
+    <meta name="description" content="A personal blog sharing technology, life, and thoughts">
     
     <!-- MathJax Support -->
     <script type="text/javascript" async
@@ -47,8 +47,8 @@
 <meta property="og:title" content="Staff" />
 <meta name="author" content="DoubleChen11" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="分享技术、生活和思考的个人博客" />
-<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<meta name="description" content="A personal blog sharing technology, life, and thoughts" />
+<meta property="og:description" content="A personal blog sharing technology, life, and thoughts" />
 <link rel="canonical" href="https://doublechen11.github.io/staff/" />
 <meta property="og:url" content="https://doublechen11.github.io/staff/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Staff" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"Staff","url":"https://doublechen11.github.io/staff/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"DoubleChen11"},"description":"A personal blog sharing technology, life, and thoughts","headline":"Staff","url":"https://doublechen11.github.io/staff/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -96,11 +96,153 @@
 
     <main class="site-content">
       <div class="container">
-        <h1>Staff</h1>
+        <div class="staff-page">
+  <h1 class="page-title">Our Team</h1>
 
-<ul>
+  <div class="staff-grid">
+    
+  </div>
+</div>
+
+<style>
+.staff-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.staff-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.staff-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+}
+
+.staff-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.staff-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e9ecef;
+}
+
+.staff-image-placeholder i {
+  font-size: 5rem;
+  color: #adb5bd;
+}
+
+.staff-info {
+  padding: 2rem;
+}
+
+.staff-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.staff-name a {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.staff-name a:hover {
+  color: #3498db;
+}
+
+.staff-position {
+  margin: 0 0 1rem 0;
+  color: #6c757d;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.staff-content {
+  color: #6c757d;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.staff-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.staff-social a {
+  color: #6c757d;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.staff-social a:hover {
+  color: #3498db;
+}
+
+@media (max-width: 768px) {
+  .staff-page {
+    padding: 1rem;
+  }
   
-</ul>
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .staff-image {
+    height: 250px;
+  }
+  
+  .staff-info {
+    padding: 1.5rem;
+  }
+  
+  .staff-name {
+    font-size: 1.3rem;
+  }
+  
+  .staff-position {
+    font-size: 1rem;
+  }
+}
+</style>
       </div>
     </main>
 

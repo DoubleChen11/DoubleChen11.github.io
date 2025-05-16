@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - DoubleChen11's Blog</title>
-    <meta name="description" content="分享技术、生活和思考的个人博客">
+    <meta name="description" content="A personal blog sharing technology, life, and thoughts">
     
     <!-- MathJax Support -->
     <script type="text/javascript" async
@@ -47,8 +47,8 @@
 <meta property="og:title" content="About" />
 <meta name="author" content="DoubleChen11" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="分享技术、生活和思考的个人博客" />
-<meta property="og:description" content="分享技术、生活和思考的个人博客" />
+<meta name="description" content="A personal blog sharing technology, life, and thoughts" />
+<meta property="og:description" content="A personal blog sharing technology, life, and thoughts" />
 <link rel="canonical" href="https://doublechen11.github.io/about/" />
 <meta property="og:url" content="https://doublechen11.github.io/about/" />
 <meta property="og:site_name" content="DoubleChen11’s Blog" />
@@ -56,7 +56,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="About" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"DoubleChen11"},"description":"分享技术、生活和思考的个人博客","headline":"About","name":"DoubleChen11’s Blog","url":"https://doublechen11.github.io/about/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"DoubleChen11"},"description":"A personal blog sharing technology, life, and thoughts","headline":"About","name":"DoubleChen11’s Blog","url":"https://doublechen11.github.io/about/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -96,158 +96,158 @@
 
     <main class="site-content">
       <div class="container">
-        <h1 id="python在自动化办公中的数学公式与统计模型示例">Python在自动化办公中的数学公式与统计模型示例</h1>
+        <h1 id="mathematical-formulas-and-statistical-models-in-python-for-office-automation">Mathematical Formulas and Statistical Models in Python for Office Automation</h1>
 
-<h3 id="1-线性回归模型">1. 线性回归模型</h3>
+<h3 id="1-linear-regression-model">1. Linear Regression Model</h3>
 
-<p>线性回归是分析两个及以上变量间线性关系的统计方法。其表达式为：</p>
+<p>Linear regression is a statistical method for analyzing the linear relationship between two or more variables. Its expression is:</p>
 
 \[y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_nx_n + \epsilon\]
 
-<p>下面是使用Python实现简单线性回归的代码：</p>
+<p>Here’s the Python implementation of simple linear regression:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 
-<span class="c1"># 示例数据
+<span class="c1"># Sample data
 </span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]).</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
 
-<span class="c1"># 创建并拟合模型
+<span class="c1"># Create and fit the model
 </span><span class="n">model</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 <span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span class="c1"># 输出系数
-</span><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"斜率: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"截距: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="c1"># Output coefficients
+</span><span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Slope: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Intercept: </span><span class="si">{</span><span class="n">model</span><span class="p">.</span><span class="n">intercept_</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="2-时间序列预测移动平均法">2. 时间序列预测（移动平均法）</h3>
+<h3 id="2-time-series-forecasting-moving-average">2. Time Series Forecasting (Moving Average)</h3>
 
-<p>移动平均法可用于平滑时间序列数据，其公式为：</p>
+<p>Moving average can be used to smooth time series data. The formula is:</p>
 
 \[MA_t = \frac{y_{t-1} + y_{t-2} + \dots + y_{t-n}}{n}\]
 
-<p>下面是Python实现移动平均的代码：</p>
+<p>Here’s the Python implementation of moving average:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">moving_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">):</span>
     <span class="s">"""
-    计算移动平均值
+    Calculate moving average
     
-    参数:
-    data (list): 时间序列数据
-    window_size (int): 窗口大小
+    Parameters:
+    data (list): Time series data
+    window_size (int): Window size
     
-    返回:
-    list: 移动平均结果
+    Returns:
+    list: Moving average results
     """</span>
     <span class="k">return</span> <span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">window_size</span><span class="p">])</span><span class="o">/</span><span class="n">window_size</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">-</span><span class="n">window_size</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
 
-<span class="c1"># 示例数据
+<span class="c1"># Sample data
 </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
 <span class="n">window_size</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="c1"># 计算移动平均
+<span class="c1"># Calculate moving average
 </span><span class="n">ma_result</span> <span class="o">=</span> <span class="n">moving_average</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">window_size</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"移动平均结果: </span><span class="si">{</span><span class="n">ma_result</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Moving average results: </span><span class="si">{</span><span class="n">ma_result</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="3-数据预处理min-max缩放">3. 数据预处理：Min-Max缩放</h3>
+<h3 id="3-data-preprocessing-min-max-scaling">3. Data Preprocessing: Min-Max Scaling</h3>
 
-<p>Min-Max缩放能把数据缩放到[0, 1]区间，公式如下：</p>
+<p>Min-Max scaling can normalize data to the range [0, 1]. The formula is:</p>
 
 \[X_{norm} = \frac{X - X_{min}}{X_{max} - X_{min}}\]
 
-<p>下面是Python实现Min-Max缩放的代码：</p>
+<p>Here’s the Python implementation of Min-Max scaling:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">min_max_scaling</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     <span class="s">"""
-    实现Min-Max缩放
+    Implement Min-Max scaling
     
-    参数:
-    data (list): 输入数据
+    Parameters:
+    data (list): Input data
     
-    返回:
-    list: 缩放后的数据
+    Returns:
+    list: Scaled data
     """</span>
     <span class="n">min_val</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="n">max_val</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">[(</span><span class="n">x</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">max_val</span> <span class="o">-</span> <span class="n">min_val</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
 
-<span class="c1"># 示例数据
+<span class="c1"># Sample data
 </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span>
 
-<span class="c1"># 进行缩放
+<span class="c1"># Perform scaling
 </span><span class="n">scaled_data</span> <span class="o">=</span> <span class="n">min_max_scaling</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"缩放后的数据: </span><span class="si">{</span><span class="n">scaled_data</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Scaled data: </span><span class="si">{</span><span class="n">scaled_data</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="4-决策树核心信息熵计算">4. 决策树核心：信息熵计算</h3>
+<h3 id="4-decision-tree-core-information-entropy-calculation">4. Decision Tree Core: Information Entropy Calculation</h3>
 
-<p>信息熵用于衡量数据的不确定性，公式为：</p>
+<p>Information entropy is used to measure data uncertainty. The formula is:</p>
 
 \[H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)\]
 
-<p>下面是Python计算信息熵的代码：</p>
+<p>Here’s the Python code for calculating information entropy:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
 
 <span class="k">def</span> <span class="nf">entropy</span><span class="p">(</span><span class="n">labels</span><span class="p">):</span>
     <span class="s">"""
-    计算信息熵
+    Calculate information entropy
     
-    参数:
-    labels (list): 标签列表
+    Parameters:
+    labels (list): List of labels
     
-    返回:
-    float: 信息熵值
+    Returns:
+    float: Information entropy value
     """</span>
     <span class="n">_</span><span class="p">,</span> <span class="n">counts</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
     <span class="n">probabilities</span> <span class="o">=</span> <span class="n">counts</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
     <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">probabilities</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">log2</span><span class="p">(</span><span class="n">probabilities</span><span class="p">))</span>
 
-<span class="c1"># 示例数据
-</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'是'</span><span class="p">,</span> <span class="s">'是'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">,</span> <span class="s">'否'</span><span class="p">]</span>
+<span class="c1"># Sample data
+</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">'Yes'</span><span class="p">,</span> <span class="s">'Yes'</span><span class="p">,</span> <span class="s">'No'</span><span class="p">,</span> <span class="s">'No'</span><span class="p">,</span> <span class="s">'No'</span><span class="p">]</span>
 
-<span class="c1"># 计算信息熵
+<span class="c1"># Calculate entropy
 </span><span class="n">entropy_value</span> <span class="o">=</span> <span class="n">entropy</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"信息熵: </span><span class="si">{</span><span class="n">entropy_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Entropy: </span><span class="si">{</span><span class="n">entropy_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="5-投资评估净现值npv计算">5. 投资评估：净现值(NPV)计算</h3>
+<h3 id="5-investment-evaluation-net-present-value-npv-calculation">5. Investment Evaluation: Net Present Value (NPV) Calculation</h3>
 
-<p>净现值（NPV）可评估投资的盈利能力，公式为：</p>
+<p>Net Present Value (NPV) can evaluate investment profitability. The formula is:</p>
 
 \[NPV = \sum_{t=0}^{n} \frac{CF_t}{(1+r)^t}\]
 
-<p>下面是Python计算净现值的代码：</p>
+<p>Here’s the Python code for calculating NPV:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">npv</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">cashflows</span><span class="p">):</span>
     <span class="s">"""
-    计算净现值
+    Calculate Net Present Value
     
-    参数:
-    rate (float): 折现率
-    cashflows (list): 现金流列表，第一个值通常为初始投资（负数）
+    Parameters:
+    rate (float): Discount rate
+    cashflows (list): List of cash flows, first value is usually initial investment (negative)
     
-    返回:
-    float: 净现值
+    Returns:
+    float: Net Present Value
     """</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">cashflow</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">cashflows</span><span class="p">):</span>
         <span class="n">total</span> <span class="o">+=</span> <span class="n">cashflow</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">rate</span><span class="p">)</span> <span class="o">**</span> <span class="n">i</span>
     <span class="k">return</span> <span class="n">total</span>
 
-<span class="c1"># 示例数据
-</span><span class="n">rate</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># 10% 折现率
-</span><span class="n">cashflows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>  <span class="c1"># 初始投资1000，后续4年每年收入300
+<span class="c1"># Sample data
+</span><span class="n">rate</span> <span class="o">=</span> <span class="mf">0.1</span>  <span class="c1"># 10% discount rate
+</span><span class="n">cashflows</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">]</span>  <span class="c1"># Initial investment 1000, 300 income for next 4 years
 </span>
-<span class="c1"># 计算净现值
+<span class="c1"># Calculate NPV
 </span><span class="n">npv_value</span> <span class="o">=</span> <span class="n">npv</span><span class="p">(</span><span class="n">rate</span><span class="p">,</span> <span class="n">cashflows</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"净现值: </span><span class="si">{</span><span class="n">npv_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Net Present Value: </span><span class="si">{</span><span class="n">npv_value</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </code></pre></div></div>
 <p><br /></p>
-<p>以上内容展示了Python在数据分析、预测建模和财务分析中的典型应用场景。</p>
+<p>The above content demonstrates typical applications of Python in data analysis, predictive modeling, and financial analysis.</p>
 
       </div>
     </main>
